@@ -9,7 +9,7 @@
 - [Assembly and Computer Architecture Notes](https://github.com/jeremylaratro/assembly_and_architecture)
 - [HackTheBox Pro Labs: Zephyr](./cs_img_dir/Zephyr_Certificate_new.pdf)
 - [HackTheBox Pro Labs: Dante](./cs_img_dir/Dante_Certificate_new.pdf)
-- [CompTIA Advanced Security Practitioner - CASP+](./cs_img_dir/CompTIA Advanced Security Practitioner (CASP+) ce certificate.pdf)
+- [CompTIA Advanced Security Practitioner - CASP+](./cs_img_dir/CompTIA Advanced Security Practitionercertificate.pdf)
 
 #### 2023:
 - [Pentesting Scripts](https://github.com/jeremylaratro/pentest_scripts)

@@ -1,75 +1,77 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="description" content="jeremy laratro">
     <meta name="keywords" content="jeremy laratro, jeremy, laratro, google, jobs, usf, cybersecurity, pentesting, information technology, software">
     <meta name="author" content="Jeremy Laratro">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>About</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-    <link rel="stylesheet" href="About.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 4.3.3, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <title>Computer Science</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;900&display=swap" rel="stylesheet"/>
+
     <link rel="stylesheet" href="styles.css">
-    <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="About">
-    <meta property="og:type" content="website jeremy laratro">
+    <script>
+        if (screen.width < 800) {
+            window.location = "/progmobile.html";
+        }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJPZ59GWQP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-QJPZ59GWQP');
+    </script>
     <style>
 
-        .parent {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(5, 0.25fr);
-            grid-column-gap: 0;
-            grid-row-gap: 100px;
+        .background6 {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            border-radius: 16px;
+            overflow: scroll;
+
+            background: url('.images/blob-scene-haikei(3).svg') no-repeat bottom / cover;
+        }
+        .rfbackground {
+            background: url('images/blob-scene-haikei(3).svg') no-repeat bottom / cover;
         }
 
-        .div1 {
-            grid-area: 1 / 1 / 6 / 6;
+        .testbutton {
+
+            color: #14396A !important;
+            font-size: 14px;
+            text-shadow: 1px 1px 0 #7CACDE;
+            box-shadow: 1px 1px 1px #BEE2F9;
+            padding: 10px 25px;
+            border-radius: 15px;
         }
 
-        .div2 {
-            grid-area: 1 / 2 / 2 / 5;
+        .testbutton:hover {
+            color: #14396A !important;
+            background: #468CCF;
+            background: linear-gradient(to top, #031C2F, #590026);
         }
-
-        .div3 {
-            grid-area: 2 / 3 / 4 / 5;
-        }
-
-        .div4 {
-            grid-area: 2 / 2 / 4 / 3;
-        }
-
-        .div5 {
-            grid-area: 4 / 2 / 5 / 5;
-        }
-
-        .div6 {
-            grid-area: 2 / 2 / 3 / 3;
-        }
-
-
-
 
         .container {
-            width: 60%;
+
             margin: 20px auto;
-            padding: 1.5rem;
-            position: relative;
+            /*padding: 1.5rem;*/
+
             border-radius: 5px;
             background: #17141d;
             box-shadow: 1rem 0 2rem #000;
-            display: flex;
+            display: flow;
+
         }
 
         h5 {
-
+            font-size: 14px;
             word-spacing: 10px;
             display: inline;
             flex-grow: inherit;
@@ -79,23 +81,24 @@
             grid-row: auto;
         }
 
-        .card.collapsible {
-            background-color: #eee;
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            position: center;
-
-
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-        }
-
-        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
         .active, card.collapsible:hover {
-            background-color: #474a57;
+            background-color: #ccc;
         }
+
+        button.container.collapsible:hover {
+            background: linear-gradient(90deg, #a5e2ff, #ffffff);
+            text-shadow: 0 0 .25rem #a5e2ff;
+            /*-webkit-text-fill-color: transparent;*/
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        button.container.collapsible:hover {
+            color: #14396A !important;
+            background: #468CCF;
+            background: linear-gradient(to top, #031C2F, #590026);
+        }
+
 
         /* Style the collapsible content. Note: hidden by default */
         card.content {
@@ -109,10 +112,10 @@
 
             cursor: pointer;
             border: none;
-            text-align: center;
+            text-align: left;
             outline: none;
             font-size: 15px;
-            margin: auto;
+            margin: 20px auto;
             padding: 1.5rem;
 
             border-radius: 15px;
@@ -120,63 +123,60 @@
             box-shadow: 1rem 0 2rem #000;
         }
 
-        .active, .container.collapsible:hover {
-            background: transparent;
-        }
 
         .container.content {
-            /*padding: 0 18px;*/
+            padding: 0 18px;
             color: #eee;
-            display: none;
-            /*overflow: scroll;*/
+            display: show;
             justify-self: center;
-            border-radius: 3%;
-            margin: auto;
-            padding: 0.75%;
             background: #17141d center;
             position: center;
 
         }
 
-        /*.container {*/
-        /*    height: auto;*/
-        /*    width: 85%;*/
-        /*    padding: 1rem;*/
-        /*    border-radius: 20px;*/
-        /*    background: #17141d;*/
-        /*    box-shadow: -1rem 0 3rem #000;*/
-        /*    flex-direction: row;*/
-        /*    margin: 20px auto;*/
-        /*    scroll-snap-align: flex-start;*/
-        /*    clear: none;*/
-
-        /*position:center;*/
-        /*justify-self: center;*/
-        /*display: flow-root;*/
+        .container {
+            height: auto;
+            width: 80%;
+            padding: 3%;
+            border-radius: 20px;
+            background: #17141d;
+        }
 
         .parent {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(4, 1fr);
+
+            grid-template-columns: 1fr 0.5fr 1fr 0.25fr 1fr;
+            grid-template-rows: 0.1fr 1fr 0.1fr 0.5fr 0fr;
             grid-column-gap: 0;
             grid-row-gap: 0;
         }
 
         .div1 {
-            grid-area: 2 / 1 / 5 / 3;
+            grid-area: 1 / 2 / 2 / 3;
         }
 
         .div2 {
-            grid-area: 2 / 3 / 5 / 5;
+            grid-area: 1 / 2 / 3 / 5;
         }
 
         .div3 {
-            grid-area: 1 / 2 / 2 / 4;
+            grid-area: 1 / 4 / 2 / 5;
         }
 
+        .div4 {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        .div5 {
+            grid-area: 2 / 3 / 3 / 4;
+        }
+
+        .div6 {
+            grid-area: 2 / 4 / 3 / 5;
+        }
+        }
 
         .header h2 {
-
+            font-size: 150%;
             margin: .25rem 0 auto;
             text-decoration: none;
             color: #d4d4d4;
@@ -187,7 +187,7 @@
         }
 
         .header h3 {
-            font-size: 1.1vw;
+            font-size: 150%;
             margin: .25rem 0 auto;
             text-decoration: none;
             color: #d4d4d4;
@@ -196,134 +196,205 @@
             cursor: pointer;
         }
 
+        .container.hardware {
+            word-wrap: break-word;
+        }
 
-        .header h6 {
-            font-size: 60px;
-            margin: .25rem 0 auto;
-            text-decoration: none;
-            color: #d4d4d4;
-            border: 0;
-            display: flow-root;
-            cursor: pointer;
-            position: center;
-            justify-self: center;
+        .background6 {
+
+        .parent.hardware.inner {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0;
+            grid-row-gap: 0;
+        }
+
+        .div1.h {
+            grid-area: 1 / 2 / 2 / 5;
+        }
+
+        .div2.h {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+
+        .div3.h {
+            grid-area: 2 / 3 / 3 / 4;
+        }
+
+        .div4.h {
+            grid-area: 2 / 4 / 3 / 5;
+        }
+
+        .div5.h {
+            grid-area: 3 / 2 / 4 / 3;
+        }
+
+        .div6.h {
+            grid-area: 3 / 3 / 4 / 4;
         }
 
 
-        $
-        button {
-            text-align: center;
         }
 
-        .spacetop {
-            margin-top: 10%;
+        .parent.hard.top {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 0;
+            grid-row-gap: 0;
+            height: 5%;
         }
 
-        .div1 {
-            grid-area: 2 / 1 / 5 / 3;
+        .div1.hard.top {
+            grid-area: 1 / 1 / 5 / 2;
         }
 
-        .div2 {
-            grid-area: 2 / 3 / 5 / 5;
+        .div2.hard.top {
+            grid-area: 2 / 1 / 2 / 2;
         }
 
-        .div3 {
-            grid-area: 1 / 2 / 2 / 4;
+        .div3.hard.top {
+            grid-area: 1 / 2 / 2 / 3;
         }
 
-        .div4 {
-            grid-area: 2 / 3 / 5 / 4;
+        .div4.hard.top {
+            grid-area: 2 / 2 / 3 / 3;
         }
 
-        .div5 {
-            grid-area: 2 / 2 / 5 / 3;
+        .div5.hard.top {
+            grid-area: 3 / 2 / 4 / 3;
         }
 
-        .u-logo {
-            width: 100%;
+        .div6.hard.top {
+            grid-area: 4 / 2 / 5 / 3;
+        }
+
+        .div7.hard.top {
+            grid-area: 3 / 1 / 3 / 1;
+        }
+
+        .div8.hard.top {
+            grid-area: 4 / 1 / 4 / 1;
+        }
+        .container.top {
             height: auto;
-            display: block;
-            border-radius: 20%;
+            width: 90%;
+            padding: 0%;
+            border-radius: 20px;
+            background: #17141d;
+        }
+        .container.main {
+            height: auto;
+            width: %;
+            padding: 0%;
+            border-radius: 20px;
+            background: #17141d;
+        }
+        a {
+            text-decoration: none;
+            font-size: 150%;
+            color: #eeee;
             margin: auto;
-            position: center;
-            justify-self: center;
-            justify-items: center;
         }
 
-        .logo-icon-ab img {
-            width: 170px;
-            height: 170px;
-            border-radius: 100%;
-            filter: grayscale(75%);
+        h3 {
+            font-size: 150%;
+            color: #eee;
+
         }
 
         p {
-            font-size: 1.3vw;
+            color: #eee;
+            font-size: 125%;
         }
-        h2 {
-            color: #eeeeee;
-        }
-        h1 {
-            color: #eeeeee;
-        }
-
     </style>
-
 </head>
 
+<body style="overflow: scroll">
 
-<!--  <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-b8a3"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">-->
-<!--        <a href="https://jeremylaratro.link" -->
-<!--        </a>-->
-<!--        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">-->
-<!--          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">-->
-<!--            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">-->
-<!--              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>-->
-<!--              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>-->
-<!--</g></svg>-->
-<!--            </a>-->
-<!--          </div>-->
-<body>
+<section class="background6" style="position: absolute">
+            <!--    <div class="grid-item">-->
+            <div class="container main" style="text-align: center;padding: 0">
+                <div class="parent hard top" style="height: 5%";>
+                    <div class="div1 hard top">
+                        <div class="card-header">
 
-<section class="background5" style="position: absolute">
+                        </div>
+                    </div>
+                    <div class="div2 hard top">
+                    </div>
+                    <div class="div1 hard top">
 
+                        <div class="container top" style="text-align: center">
 
-    <div class="div2">
-        <div class="rfbackground" style="overflow: hidden">
-
-            <div class="u-nav-container">
-                <ul class="u-nav u-unstyled u-nav-1">
-                    <li class="u-nav-item"><a
-                            class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                            href="index.html" style="padding: 10px 20px;">Home</a>
-                    </li>
-                    <li class="u-nav-item"><a
-                            class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                            href="About.html" style="padding: 10px 20px;">About</a>
-                    </li>
-                    <li class="u-nav-item"><a
-                            class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                            href="https://www.flickr.com/photos/jeremylaratro/" style="padding: 10px 20px;">Flickr</a>
-                    </li>
-                    <li class="u-nav-item"><a
-                            class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                            href="Photolio.html" style="padding: 10px 20px;">Photos</a>
-                    </li>
-                    <li class="u-nav-item"><a
-                            class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                            href="categories/chem.html" style="padding: 10px 20px;">Chemistry</a>
-                    </li>
-                    <li class="u-nav-item"><a
-                            class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
-                            href="categories/radio.html" style="padding: 10px 20px;">Radio</a></li>
-                </ul>
-
+                            <div class="rfbackground" style="margin: 0; display:fit-content">
+                                <div class="card-header">
+                                    <div class="testbutton">
+                                        <a href="index" target="_blank">Home</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div4 hard top">
+                        <div class="container top" style="text-align: center">
+                            <div class="rfbackground" style="margin: 0; display:fit-content">
+                                <div class="card-header">
+                                    <div class="testbutton">
+                                        <a href="about" target="_blank">About | Contact </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div5 hard top">
+                        <div class="container top" style="text-align: center">
+                            <div class="rfbackground" style="margin: 0; display:fit-content">
+                                <div class="card-header">
+                                    <div class="testbutton">
+                                        <a href="chem" target="_blank">Chemistry</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div6 hard top">
+                        <div class="container top" style="text-align: center">
+                            <div class="rfbackground" style="margin: 0; display:fit-content">
+                                <div class="card-header">
+                                    <div class="testbutton">
+                                        <a href="radio" target="_blank">Radio</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div7 hard top">
+                        <div class="container top" style="text-align: center">
+                            <div class="rfbackground" style="margin: 0; display:fit-content">
+                                <div class="card-header">
+                                    <div class="testbutton">
+                                        <a href="hardware" target="_blank">Hardware </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div8 hard top">
+                        <div class="container top" style="text-align: center">
+                            <div class="rfbackground" style="margin: 0; display:fit-content">
+                                <div class="card-header">
+                                    <div class="testbutton">
+                                        <a href="photo" target="_blank">Photography </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
         </div>
     </div>
-
 
 
 
@@ -347,16 +418,11 @@
     <h1>About Me:</h1>
     <p><be>
         <h2>Hacker. Engineer. Outdoorsman.</h2>
-        I currently hold the OSCP (Offensive Security Certified Professional) and Security+ and have experience in various IT and 
+        I currently hold the OSCP (Offensive Security Certified Professional), CompTia Advanced Security Practitioner (CASP+), and CompTia Security+ certifications and have experience in various IT and 
         engineering topics ranging from advanced hardware and circuitry testing to offensive security consulting. As a consultant in the private sector
         I gained invaluable experience carrying out penetration testing engagements with external and internal network, web, mobile, and cloud scopes across an array of client environments.
-
-        
-    
-    </br><br>
-        Currently, I work as a penetration tester in the defense sector supporting the 48th Cyber Test Squadron.
-        
-        
+   
+        Outside of work, I enjoy designing PCBs and building electronics, amateur radio, as well as scuba diving, hiking, camping, aviation, and traveling.  
     </br><br>
         
     
@@ -370,7 +436,7 @@
 
     <br><a href=https://www.credential.net/dcbb6c37-44a0-44d0-bce7-2bd5d9a5601c#gs.so16mh target="_blank">OSCP Certificate Verification</a></br>
    <br> <a href=https://github.com/jeremylaratro target="_blank">My GitHub Profile</a> </br>
-        <br><a href=https://tryhackme.com/p/jeremylaratro target="_blank">My TryHackMe Profile</a></br>
+        <br><a href=https://app.hackthebox.com/profile/1106620 target="_blank">My HackTheBox Profile</a></br>
      <br> <br>
         <a href=https://tryhackme.com/p/jeremylaratro target="_blank">
 

@@ -357,7 +357,7 @@
 
                     <h2 class=" animate__animated animate__zoomInDown">
                         <a href="/CS/cysec" target="_blank">
-                            Recruiters & Jobs: Cyber Security Blog Here </a>
+                            Cyber Security Blog Here </a>
                     </h2>
                     <h3 class=" animate__animated animate__zoomInDown">Jeremy Laratro</h3>
                 </div>
@@ -367,13 +367,13 @@
         <div class="div div6">
             <article class="card">
                 <div class="card-header">
-                    <a href="categories/radio.html">
+                    <a href="radio">
                         <h2> Radio | RF </h2>
                     </a>
                     <div class="card-header">
 
                         <p> Antenna design and construction, RF circuits, HF communications, and more </p>
-                        <a href="radio.html">
+                        <a href="radio">
                                           <span class="logo">
 
                                               <span class="logo-icon">
@@ -390,7 +390,7 @@
         </div>
 
         <div class="div div4">
-            <a href="/prog.html">
+            <a href="/compsci">
                 <article class="card">
                     <div class="card-header">
 
@@ -421,7 +421,7 @@
             </a>
         </div>
         <div class="div div5">
-            <a href="categories/Hardware.html">
+            <a href="hardware">
                 <article class="card">
                     <div class="card-header">
                         <h2> Hardware</h2>
@@ -445,7 +445,7 @@
         </div>
 
         <div class="div div7">
-            <a href="/Photolio.html">
+            <a href="photo">
                 <article class="card">
                     <div class="card-header">
                         <h2> Photography </h2>
@@ -469,7 +469,7 @@
             </a>
         </div>
         <div class="div div8">
-            <a href="/categories/chem.html">
+            <a href="chem">
                 <article class="card">
                     <div class="card-header">
                         <h2> Chemistry </h2>
@@ -493,7 +493,7 @@
 
         </div>
         <div class="div div9">
-            <a href="/About.html">
+            <a href="about">
                 <article class="card">
                     <div class="card-header">
                         <h2> About / Contact </h2>

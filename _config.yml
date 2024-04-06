@@ -27,3 +27,10 @@ github_username:  jeremylaratro
 # Build settings
 markdown: CommonMarkGhPages
 remote_theme: pages-themes/cayman@v0.2.0
+permalink: /:path/
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+

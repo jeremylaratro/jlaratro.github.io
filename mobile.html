@@ -15,11 +15,7 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <script>
-        if (screen.width < 800) {
-            window.location = "/mobile.html";
-        }
-    </script>
+
     <style media="screen">
         h1 {
             font-size: 4rem;
@@ -42,8 +38,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 400px;
-            padding-top: 70px;
+
         }
 
 
@@ -64,7 +59,7 @@
 
 
         .card-header {
-            margin: 5% 3% 3% 3%;
+            /*margin: 5% 3% 3% 3%;*/
 
         }
 
@@ -77,11 +72,11 @@
         }
 
         .card-header h2 {
-            font-size: 40px;
+            font-size: 200%;
             text-decoration: none;
             color: #d4d4d4;
             border: 0;
-            display: flex;
+            text-align: center;
             cursor: pointer;
         }
 
@@ -103,19 +98,17 @@
             grid-area: auto;
             align-self: start;
             box-sizing: border-box;
-            padding-top: 0;
-            padding-bottom: 30%;
+
 
         }
 
         .logo-icon img {
-            width: 50%;
-            height: 100%;
+            width: 40%;
             border-radius: 100%;
             filter: grayscale(75%);
             display: -webkit-flex;
             /*margin: 30px 5px 2px;*/
-            margin: 30px 2px 2px;
+            margin: auto;
 
         }
 
@@ -162,68 +155,47 @@
         }
 
         .parent {
-            display: grid;
-            grid-template-columns: repeat(5, 5fr);
-            grid-template-rows: repeat(2, .1fr) repeat(2, 0.1fr) 0fr;
-            grid-column-gap: 2.5%;
-            padding-bottom: 3%;
-            padding-top: 1%;
-            grid-row-gap: 2%;
-            grid-auto-flow: column;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
         }
 
         .div {
-            justify-self: center;
-            position: relative;
-            border-radius: 16px;
-            background: #17141d;
-            box-shadow: -1rem 0 3rem #000;
-        }
+            margin: auto;
 
-        .div.div1 {
-            grid-area: 1 / 1 / 6 / 6;
+            padding: 2%;
 
         }
 
-        .div.div2 {
-            grid-area: 1 / 2 / 2 / 5;
+        .div1 {
+            grid-area: 1 / 1 / 3 / 3;
+        }
 
+        .div2 {
+            grid-area: 2 / 1 / 3 / 2;
         }
 
         .div3 {
-            grid-area: 1 / 3 / 2 / 4;
-
-        }
-
-        .div.div4 {
-            grid-area: 2 / 3 / 3 / 3;
-
-        }
-
-        .div.div5 {
-            grid-area: 2 / 4 / 3 / 5;
-
-        }
-
-        .div.div6 {
             grid-area: 2 / 2 / 3 / 3;
-
         }
 
-        .div.div7 {
+        .div4 {
+            grid-area: 3 / 1 / 4 / 2;
+        }
+
+        .div5 {
             grid-area: 3 / 2 / 4 / 3;
-
         }
 
-        .div.div8 {
-            grid-area: 3 / 3 / 4 / 4;
-
+        .div6 {
+            grid-area: 4 / 1 / 5 / 2;
         }
 
-        .div.div9 {
-            grid-area: 3 / 4 / 4 / 5;
-
+        .div7 {
+            grid-area: 4 / 2 / 5 / 3;
         }
+
 
         h5 {
             font-size: 14px;
@@ -253,15 +225,12 @@
         }
 
         .container {
-            width: 50%;
-            height: 100%;
-            margin: 2px auto;
-            padding: 1.5rem;
-
-            border-radius: 5px;
+            width: 80%;
+            margin: auto;
+            padding: 2%;
+            border-radius: 5%;
             background: #17141d;
             box-shadow: 1rem 0 2rem #000;
-            display: flow;
         }
 
         .container.header {
@@ -285,7 +254,7 @@
         .grid-item {
             position: relative;
             text-align: center;
-            padding: 3%;
+
         }
 
         .nav li {
@@ -334,33 +303,34 @@
 <section class="blobs">
 
 
-    <div class="parent">
+    <div class="parent" style="text-align: center">
+        <div class="div">
+            <div class="div div1">
+                <div class="grid-item">
+                    <h1 class=" animate__animated animate__zoomInDown">Welcome!</h1>
 
-        <div class="div div2">
-            <div class="grid-item">
-                <h1 class=" animate__animated animate__zoomInDown">Welcome!</h1>
+                    <div class="container header">
 
-                <div class="container header">
+                        <h2 class=" animate__animated animate__zoomInDown">
+                            <a href="/CS/cysec" target="_blank">
+                                NEW: Cyber Security | Computer Science : Blog, Notes and More </a>
 
-                    <h2 class=" animate__animated animate__zoomInDown">
-                        <a href="/CS/cysec" target="_blank">
-                            NEW: Cyber Security | Computer Science : Blog, Notes and More </a>
-                    </h2>
-                    <h3 class=" animate__animated animate__zoomInDown">Jeremy Laratro</h3>
+                        </h2>
+                        <h3 class=" animate__animated animate__zoomInDown">Jeremy Laratro</h3>
+                    </div>
                 </div>
+
             </div>
-
-        </div>
-        <div class="div div6">
-            <article class="card">
-                <div class="card-header">
-                    <a href="categories/radio.html">
-                        <h2> Radio | RF </h2>
-                    </a>
+            <div class="div div2">
+                <article class="container">
                     <div class="card-header">
-
-                        <p> Antenna design and construction, RF circuits, HF communications, and more </p>
                         <a href="radio.html">
+                            <h2> Radio | RF </h2>
+                        </a>
+                        <div class="card-header">
+
+                            <!--                        <p> Antenna design and construction, RF circuits, HF communications, and more </p>-->
+                            <a href="radio.html">
                                           <span class="logo">
 
                                               <span class="logo-icon">
@@ -368,25 +338,25 @@
                                                        alt="radio, HF, amateur radio, ham radio, jeremy laratro">
                                               </span>
                                           </span>
-                        </a>
+                            </a>
 
+                        </div>
                     </div>
-                </div>
 
-            </article>
-        </div>
+                </article>
+            </div>
 
-        <div class="div div4">
-            <a href="/prog.html">
-                <article class="card">
-                    <div class="card-header">
-
-                        <h2> Computer Science </h2>
+            <div class="div div3">
+                <a href="/prog.html">
+                    <article class="container">
                         <div class="card-header">
 
-                            <p> Cyber Security, Web & Software Development </p>
+                            <h2> Programming & Software </h2>
+                            <div class="card-header">
 
-                            <div class="space some">
+                                <!--                            <p> Python, algorithms, CAD, and more </p>-->
+
+                                <div class="space some">
 
 
 
@@ -399,24 +369,24 @@
 
                                              </span>
 
+                                </div>
                             </div>
+
                         </div>
 
-                    </div>
-
-                </article>
-            </a>
-        </div>
-        <div class="div div5">
-            <a href="categories/Hardware.html">
-                <article class="card">
-                    <div class="card-header">
-                        <h2> Hardware</h2>
+                    </article>
+                </a>
+            </div>
+            <div class="div div4">
+                <a href="/Hardware.html">
+                    <article class="container">
                         <div class="card-header">
+                            <h2> Hardware</h2>
+                            <div class="card-header">
 
-                            <p> PCB and circuit design in KiCAD, soldering, hardware repairs, and more</p>
+                                <!--                            <p> PCB and circuit design in KiCAD, soldering, hardware repairs, and more</p>-->
 
-                            <div class="logo">
+                                <div class="logo">
                                                    <span class="logo">
 
                                                        <span class="logo-icon">
@@ -424,23 +394,23 @@
                                                                 alt="radio, HF, amateur radio, ham radio, jeremy laratro">
                                                        </span>
                                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </article>
-            </a>
-        </div>
+                    </article>
+                </a>
+            </div>
 
-        <div class="div div7">
-            <a href="/Photolio.html">
-                <article class="card">
-                    <div class="card-header">
-                        <h2> Photography </h2>
+            <div class="div div5">
+                <a href="/Photolio.html">
+                    <article class="container">
                         <div class="card-header">
+                            <h2> Photography </h2>
+                            <div class="card-header">
 
-                            <p> Click here to see my photography portfolio </p>
+                                <!--                            <p> Click here to see my photography portfolio </p>-->
 
-                            <span class="logo">
+                                <span class="logo">
 
                                                           <span class="logo-icon">
                                                               <img src=images/photo-camera-camera-svgrepo-com.svg
@@ -449,22 +419,22 @@
                                                       </span>
 
 
+                            </div>
                         </div>
-                    </div>
 
-                </article>
-            </a>
-        </div>
-        <div class="div div8">
-            <a href="/categories/chem.html">
-                <article class="card">
-                    <div class="card-header">
-                        <h2> Chemistry </h2>
+                    </article>
+                </a>
+            </div>
+            <div class="div div6">
+                <a href="/categories/chem.html">
+                    <article class="container">
                         <div class="card-header">
+                            <h2> Chemistry </h2>
+                            <div class="card-header">
 
-                            <p> Extractions, syntheses, and other cool chemistry projects! </p>
+                                <!--                            <p> Extractions, syntheses, and other cool chemistry projects! </p>-->
 
-                            <span class="logo">
+                                <span class="logo">
 
                                                                     <span class="logo-icon">
                                                                         <img src='images/gummy-chemistry-lab.svg'
@@ -472,22 +442,22 @@
                                                                     </span>
                                                                 </span>
 
+                            </div>
                         </div>
-                    </div>
 
-                </article>
-            </a>
+                    </article>
+                </a>
 
-        </div>
-        <div class="div div9">
-            <a href="/About.html">
-                <article class="card">
-                    <div class="card-header">
-                        <h2> About / Contact </h2>
+            </div>
+            <div class="div div7">
+                <a href="/About.html">
+                    <article class="container">
                         <div class="card-header">
-                            <p> Would you like to get in touch or read more about me and this site? Click here! </p>
+                            <h2> About / Contact </h2>
+                            <div class="card-header">
+                                <!--                            <p> Would you like to get in touch or read more about me and this site? Click here! </p>-->
 
-                            <span class="logo">
+                                <span class="logo">
                                                  <span class="logo-icon">
                                                      <img src='images/JSL_7031(1).jpg'
                                                           alt="radio, HF, amateur radio, ham radio, jeremy laratro">
@@ -495,13 +465,14 @@
                                                  </span>
                                              </span>
 
+                            </div>
                         </div>
-                    </div>
-                </article>
-            </a>
+                    </article>
+                </a>
+            </div>
         </div>
-    </div>
 
+    </div>
 
 </section>
 <footer class="footer">

@@ -1,516 +1,261 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeremy Laratro: Portfolio</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;900&display=swap" rel="stylesheet"/>
-
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <script>
-        if (screen.width < 800) {
-            window.location = "/mobile.html";
-        }
-    </script>
-    <style media="screen">
-        h1 {
-            font-size: 4rem;
-        }
-
-        p {
-            font-size: 1.5rem;
-        }
-
-        body {
-
-            font-family: 'Prompt', sans-serif;
-            color: white;
-            background: #202731;
-            overflow-x: hidden;
-        }
-
-        section {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 400px;
-            padding-top: 70px;
-        }
-
-
-        .blobs {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            border-radius: 16px;
-
-
-            background: url('blobs/blobs.svg') no-repeat bottom / cover;
-        }
-
-
-        .card:hover {
-            transform: translateY(-1rem);
-        }
-
-
-        .card-header {
-            margin: 5% 3% 3% 3%;
-
-        }
-
-
-        .card-header p {
-            font-size: 24px;
-            margin: 0 0 0;
-            color: #7a7a8c;
-
-        }
-
-        .card-header h2 {
-            font-size: 40px;
-            text-decoration: none;
-            color: #d4d4d4;
-            border: 0;
-            display: flex;
-            cursor: pointer;
-        }
-
-        .card.bottom h3 {
-            margin-bottom: 0;
-            position: center;
-            color: white;
-        }
-
-
-        .card-header h2:hover {
-            background: linear-gradient(90deg, #a5e2ff, #ffffff);
-            text-shadow: 0 0 .25rem #a5e2ff;
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-        }
-
-        .logo {
-            grid-area: auto;
-            align-self: start;
-            box-sizing: border-box;
-            padding-top: 0;
-            padding-bottom: 30%;
-
-        }
-
-        .logo-icon img {
-            width: 50%;
-            height: 100%;
-            border-radius: 100%;
-            filter: grayscale(75%);
-            display: -webkit-flex;
-            /*margin: 30px 5px 2px;*/
-            margin: 30px 2px 2px;
-
-        }
-
-        .tags a {
-            font-style: normal;
-            font-weight: 700;
-            color: #7a7a8c;
-            text-transform: uppercase;
-            font-size: .66rem;
-            border: 3px solid #28242f;
-            border-radius: 2rem;
-            padding: .2rem .85rem .25rem;
-            position: relative;
-        }
-
-        .tags a:hover {
-            background: linear-gradient(90deg, #a5e2ff, #ffffff);
-            text-shadow: none;
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-            -webkit-box-decoration-break: clone;
-            border-color: white;
-        }
-
-        .footer h4 {
-            font-size: 28px;
-            margin: .25rem 0 auto;
-            text-decoration: none;
-            color: #ffffff;
-            border: 0;
-            display: inline-block;
-            cursor: pointer;
-            position: sticky;
-            bottom: 0;
-            left: 0;
-            right: 0;
-
-        }
-
-        h6 {
-            font-size: 24px;
-            word-spacing: 10px;
-            display: inline;
-        }
-
-        .parent {
-            display: grid;
-            grid-template-columns: repeat(5, 5fr);
-            grid-template-rows: repeat(2, .1fr) repeat(2, 0.1fr) 0fr;
-            grid-column-gap: 2.5%;
-            padding-bottom: 3%;
-            padding-top: 1%;
-            grid-row-gap: 2%;
-            grid-auto-flow: column;
-        }
-
-        .div {
-            justify-self: center;
-            position: relative;
-            border-radius: 16px;
-            background: #17141d;
-            box-shadow: -1rem 0 3rem #000;
-        }
-
-        .div.div1 {
-            grid-area: 1 / 1 / 6 / 6;
-
-        }
-
-        .div.div2 {
-            grid-area: 1 / 2 / 2 / 5;
-
-        }
-
-        .div3 {
-            grid-area: 1 / 3 / 2 / 4;
-
-        }
-
-        .div.div4 {
-            grid-area: 2 / 3 / 3 / 3;
-
-        }
-
-        .div.div5 {
-            grid-area: 2 / 4 / 3 / 5;
-
-        }
-
-        .div.div6 {
-            grid-area: 2 / 2 / 3 / 3;
-
-        }
-
-        .div.div7 {
-            grid-area: 3 / 2 / 4 / 3;
-
-        }
-
-        .div.div8 {
-            grid-area: 3 / 3 / 4 / 4;
-
-        }
-
-        .div.div9 {
-            grid-area: 3 / 4 / 4 / 5;
-
-        }
-
-        h5 {
-            font-size: 14px;
-            word-spacing: 10px;
-            display: inline;
-            flex-grow: inherit;
-            color: #7a7a8c;
-            text-decoration: transparent;
-            text-shadow: 1px 1px 0 #28242f;
-            grid-row: auto;
-        }
-
-        h6 {
-            font-size: 24px;
-            word-spacing: 10px;
-            display: inline;
-        }
-
-        header h3 {
-            font-size: 40px;
-            margin: .25rem 0 auto;
-            text-decoration: none;
-            color: #d4d4d4;
-            border: 0;
-            justify-items: right;
-            cursor: pointer;
-        }
-
-        .container {
-            width: 50%;
-            height: 100%;
-            margin: 2px auto;
-            padding: 1.5rem;
-
-            border-radius: 5px;
-            background: #17141d;
-            box-shadow: 1rem 0 2rem #000;
-            display: flow;
-        }
-
-        .container.header {
-            width: auto;
-            position: relative;
-            padding-bottom: 2%;
-            margin: auto;
-
-            border-radius: 1rem;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .container.header h1 {
-            font-size: 1.5rem;
-            margin: 0;
-            text-decoration: none;
-            color: #d4d4d4;
-            border: 0;
-        }
-
-        .grid-item {
-            position: relative;
-            text-align: center;
-            padding: 3%;
-        }
-
-        .nav li {
-            display: inline-block;
-            font-size: 18px;
-            margin: auto;
-            text-decoration: none;
-            color: #ffffff;
-            border: 0;
-            cursor: pointer;
-            position: sticky;
-            bottom: 0;
-            left: 0;
-            right: 0;
-
-
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-
-        footer h3 {
-            font-size: 40px;
-            margin: .25rem 0 auto;
-            text-decoration: none;
-            color: #d4d4d4;
-            border: 0;
-            justify-items: right;
-            cursor: pointer;
-            text-align: center;
-        }
-
-        .footer {
-
-            text-align: center;
-        }
-
-
-    </style>
+    <title>J LARATRO | Cybersecurity Engineer</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/effects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <!-- CRT Effect -->
+    <div class="crt"></div>
 
-<section class="blobs">
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
 
+    <!-- Classification Bar -->
+    <div class="class-bar"></div>
 
-    <div class="parent">
+    <!-- Data Stream Effect -->
+    <div class="data-stream">
+        <div class="stream-column" style="left: 5%; animation-duration: 20s; animation-delay: 0s;">01101000<br>01100001<br>01100011<br>01101011</div>
+        <div class="stream-column" style="left: 15%; animation-duration: 16s; animation-delay: -3s;">10110101<br>00101010<br>11010010<br>01001101</div>
+        <div class="stream-column" style="left: 28%; animation-duration: 22s; animation-delay: -5s;">SIGINT<br>COMINT<br>ELINT<br>MASINT</div>
+        <div class="stream-column" style="left: 42%; animation-duration: 18s; animation-delay: -2s;">11001100<br>01010101<br>10101010<br>00110011</div>
+        <div class="stream-column" style="left: 58%; animation-duration: 21s; animation-delay: -7s;">OSINT<br>HUMINT<br>GEOINT<br>TECHINT</div>
+        <div class="stream-column" style="left: 72%; animation-duration: 17s; animation-delay: -4s;">10010110<br>01101001<br>11000110<br>00111001</div>
+        <div class="stream-column" style="left: 88%; animation-duration: 19s; animation-delay: -1s;">01011010<br>10100101<br>00110110<br>11001001</div>
+    </div>
 
-        <div class="div div2">
-            <div class="grid-item">
-                <h1 class=" animate__animated animate__zoomInDown">Welcome!</h1>
+    <!-- Tactical Frame -->
+    <div class="tactical-frame"></div>
+    <div class="tactical-frame-bottom"></div>
 
-                <div class="container header">
+    <!-- Navigation -->
+    <nav class="cyber-nav">
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="index.html" class="nav-logo">
+                    <span class="logo-bracket">[</span>
+                    <span class="logo-text">JL</span>
+                    <span class="logo-bracket">]</span>
+                </a>
+                <span class="logo-tag">CYBER OPS</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">./home</a>
+                <a href="pages/about.html" class="nav-link">./whoami</a>
+                <a href="pages/cyber-projects.html" class="nav-link">./cyberops</a>
+                <a href="pages/projects.html" class="nav-link">./research</a>
+                <a href="pages/blog.html" class="nav-link">./intel</a>
+                <a href="pages/contact.html" class="nav-link">./comms</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-                    <h2 class=" animate__animated animate__zoomInDown">
-                        <a href="/CS/cysec" target="_blank">
-                            NEW: Cyber Security | Computer Science : Blog, Notes and More </a>
-                    </h2>
-                    <h3 class=" animate__animated animate__zoomInDown">Jeremy Laratro</h3>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="intel-terminal">
+                <div class="terminal-header">
+                    <div class="terminal-controls">
+                        <span class="terminal-btn close"></span>
+                        <span class="terminal-btn min"></span>
+                        <span class="terminal-btn max"></span>
+                    </div>
+                    <span class="terminal-title">Secure Terminal // COMSEC Active</span>
+                    <div class="terminal-status">
+                        <span class="status-dot"></span>
+                        <span>ENCRYPTED</span>
+                    </div>
+                </div>
+                <div class="terminal-body">
+                    <div class="intel-header">
+                        <span class="intel-badge">OPERATOR PROFILE</span>
+                        <span class="intel-id">REF: JL-SEC-001</span>
+                    </div>
+
+                    <div class="prompt-line">
+                        <span class="prompt">$</span>
+                        <span class="command">whoami</span>
+                    </div>
+
+                    <div class="ascii-name">
+▄▄██▀▀▀   ██▓    ▄▄▄       ██▀███   ▄▄▄    ▄▄▄█████▓ ██▀███   ▒█████
+   ▒██     ▓██▒   ▒████▄    ▓██ ▒ ██▒▒████▄  ▓  ██▒ ▓▒▓██ ▒ ██▒▒██▒  ██▒
+   ░██     ▒██░   ▒██  ▀█▄  ▓██ ░▄█ ▒▒██  ▀█▄▒ ▓██░ ▒░▓██ ░▄█ ▒▒██░  ██▒
+▓██▄██▓    ▒██░   ░██▄▄▄▄██ ▒██▀▀█▄  ░██▄▄▄▄██░ ▓██▓ ░ ▒██▀▀█▄  ▒██   ██░
+ ▓███▒     ░██████▒▓█   ▓██▒░██▓ ▒██▒ ▓█   ▓██▒ ▒██▒ ░ ░██▓ ▒██▒░ ████▓▒░
+ ▒▓▒▒░     ░ ▒░▓  ░▒▒   ▓▒█░░ ▒▓ ░▒▓░ ▒▒   ▓▒█░ ▒ ░░   ░ ▒▓ ░▒▓░░ ▒░▒░▒░
+ ▒ ░▒░     ░ ░ ▒  ░ ▒   ▒▒ ░  ░▒ ░ ▒░  ▒   ▒▒ ░   ░      ░▒ ░ ▒░  ░ ▒ ▒░
+ ░ ░ ░       ░ ░    ░   ▒     ░░   ░   ░   ▒    ░        ░░   ░ ░ ░ ░ ▒</div>
+
+                    <div class="prompt-line">
+                        <span class="prompt">$</span>
+                        <span class="command">cat /etc/operator.conf</span>
+                    </div>
+                    <div class="output">
+                        <span class="highlight">DESIGNATION</span>=<span class="value">"Cybersecurity Engineer"</span><br>
+                        <span class="highlight">SPECIALTY</span>=<span class="value">"Penetration Testing, Offensive Security"</span>
+                    </div>
+
+                    <div class="prompt-line">
+                        <span class="prompt">$</span>
+                        <span class="command">systemctl status --all</span>
+                    </div>
+                    <div class="output">
+                        [<span class="success">+</span>] Offensive capabilities: READY<br>
+                        [<span class="success">+</span>] Defense protocols: ACTIVE<br>
+                        [<span class="success">+</span>] Intel gathering: OPERATIONAL<br>
+                        <br>
+                        <span class="intel-status">SYSTEMS NOMINAL</span>
+                    </div>
+
+                    <div class="prompt-line">
+                        <span class="prompt">$</span>
+                        <span class="typing-text">Proceed to mission sectors below...</span>
+                    </div>
                 </div>
             </div>
-
         </div>
-        <div class="div div6">
-            <article class="card">
-                <div class="card-header">
-                    <a href="categories/radio.html">
-                        <h2> Radio | RF </h2>
-                    </a>
-                    <div class="card-header">
+    </section>
 
-                        <p> Antenna design and construction, RF circuits, HF communications, and more </p>
-                        <a href="radio.html">
-                                          <span class="logo">
-
-                                              <span class="logo-icon">
-                                                  <img src='blobs/em.png'
-                                                       alt="radio, HF, amateur radio, ham radio, jeremy laratro">
-                                              </span>
-                                          </span>
-                        </a>
-
-                    </div>
-                </div>
-
-            </article>
-        </div>
-
-        <div class="div div4">
-            <a href="/prog.html">
-                <article class="card">
-                    <div class="card-header">
-
-                        <h2> Computer Science </h2>
-                        <div class="card-header">
-
-                            <p> Cyber Security, Web & Software Development </p>
-
-                            <div class="space some">
-
-
-
-                                             <span class="logo">
-
-                                                 <span class="logo-icon">
-                                                     <img src='blobs/python1.jpeg'
-                                                          alt="radio, HF, amateur radio, ham radio, jeremy laratro">
-                                                 </span>
-
-                                             </span>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                </article>
-            </a>
-        </div>
-        <div class="div div5">
-            <a href="categories/Hardware.html">
-                <article class="card">
-                    <div class="card-header">
-                        <h2> Hardware</h2>
-                        <div class="card-header">
-
-                            <p> PCB and circuit design in KiCAD, soldering, hardware repairs, and more</p>
-
-                            <div class="logo">
-                                                   <span class="logo">
-
-                                                       <span class="logo-icon">
-                                                           <img src='images/pgb-dsp.svg'
-                                                                alt="radio, HF, amateur radio, ham radio, jeremy laratro">
-                                                       </span>
-                                                   </span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </a>
-        </div>
-
-        <div class="div div7">
-            <a href="/Photolio.html">
-                <article class="card">
-                    <div class="card-header">
-                        <h2> Photography </h2>
-                        <div class="card-header">
-
-                            <p> Click here to see my photography portfolio </p>
-
-                            <span class="logo">
-
-                                                          <span class="logo-icon">
-                                                              <img src=images/photo-camera-camera-svgrepo-com.svg
-                                                                   alt="radio, HF, amateur radio, ham radio, jeremy laratro">
-                                                          </span>
-                                                      </span>
-
-
-                        </div>
-                    </div>
-
-                </article>
-            </a>
-        </div>
-        <div class="div div8">
-            <a href="/categories/chem.html">
-                <article class="card">
-                    <div class="card-header">
-                        <h2> Chemistry </h2>
-                        <div class="card-header">
-
-                            <p> Extractions, syntheses, and other cool chemistry projects! </p>
-
-                            <span class="logo">
-
-                                                                    <span class="logo-icon">
-                                                                        <img src='images/gummy-chemistry-lab.svg'
-                                                                             alt="radio, HF, amateur radio, ham radio, jeremy laratro">
-                                                                    </span>
-                                                                </span>
-
-                        </div>
-                    </div>
-
-                </article>
-            </a>
-
-        </div>
-        <div class="div div9">
-            <a href="/About.html">
-                <article class="card">
-                    <div class="card-header">
-                        <h2> About / Contact </h2>
-                        <div class="card-header">
-                            <p> Would you like to get in touch or read more about me and this site? Click here! </p>
-
-                            <span class="logo">
-                                                 <span class="logo-icon">
-                                                     <img src='images/JSL_7031(1).jpg'
-                                                          alt="radio, HF, amateur radio, ham radio, jeremy laratro">
-
-                                                 </span>
-                                             </span>
-
-                        </div>
-                    </div>
-                </article>
-            </a>
+    <!-- Info Ticker -->
+    <div class="ticker">
+        <div class="ticker-content">
+            <span class="ticker-item"><span class="label">STATUS:</span> <span class="val">OPERATIONAL</span></span>
+            <span class="ticker-item"><span class="label">LAST_SYNC:</span> <span class="val">2025.12</span></span>
+            <span class="ticker-item"><span class="label">THREAT_LEVEL:</span> <span class="val">ELEVATED</span></span>
+            <span class="ticker-item"><span class="label">SECTOR:</span> <span class="val">CYBER OPS</span></span>
+            <span class="ticker-item"><span class="label">ENCRYPTION:</span> <span class="val">AES-256</span></span>
+            <span class="ticker-item"><span class="label">STATUS:</span> <span class="val">OPERATIONAL</span></span>
+            <span class="ticker-item"><span class="label">LAST_SYNC:</span> <span class="val">2025.12</span></span>
+            <span class="ticker-item"><span class="label">THREAT_LEVEL:</span> <span class="val">ELEVATED</span></span>
+            <span class="ticker-item"><span class="label">SECTOR:</span> <span class="val">CYBER OPS</span></span>
+            <span class="ticker-item"><span class="label">ENCRYPTION:</span> <span class="val">AES-256</span></span>
         </div>
     </div>
 
+    <!-- Main Sections Grid -->
+    <section class="cards-section">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">Mission Sectors</h2>
+            <span class="section-line"></span>
+        </div>
 
-</section>
-<footer class="footer">
+        <div class="cards-grid">
+            <!-- About Card - Intel Brief Style -->
+            <a href="pages/about.html" class="card intel-brief">
+                <div class="brief-header">
+                    <span class="brief-type">PERSONNEL</span>
+                    <span class="brief-id">SEC-001</span>
+                </div>
+                <h3 class="brief-title">OPERATOR DOSSIER</h3>
+                <div class="brief-body">
+                    <p><span class="brief-label">SUMMARY:</span> Background, certifications, and operational history in offensive security.</p>
+                    <p><span class="brief-label">STATUS:</span> <span class="brief-status">ACTIVE</span></p>
+                </div>
+                <span class="card-link">ACCESS FILE <span class="cursor">_</span></span>
+            </a>
 
-    <h2>Jeremy Laratro 2022&copy</h2>
-</footer>
+            <!-- Cyber Projects Card - Featured -->
+            <a href="pages/cyber-projects.html" class="card featured">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="11" width="18" height="11" rx="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <span class="card-code">OPS-ALPHA</span>
+                </div>
+                <h3>Cyber Operations</h3>
+                <p>Penetration testing frameworks, offensive tooling, exploit development, and red team operations.</p>
+                <span class="card-link">./execute.sh <span class="cursor">_</span></span>
+            </a>
 
+            <!-- Projects Card -->
+            <a href="pages/projects.html" class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="4" y="4" width="16" height="16" rx="2"/>
+                            <rect x="9" y="9" width="6" height="6"/>
+                            <line x1="9" y1="1" x2="9" y2="4"/>
+                            <line x1="15" y1="1" x2="15" y2="4"/>
+                        </svg>
+                    </div>
+                    <span class="card-code">R&D-LAB</span>
+                </div>
+                <h3>Research & Development</h3>
+                <p>Hardware projects, RF/radio systems, electronics, and experimental technology.</p>
+                <span class="card-link">ls /projects <span class="cursor">_</span></span>
+            </a>
 
+            <!-- Blog Card -->
+            <a href="pages/blog.html" class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                    </div>
+                    <span class="card-code">INTEL-RPT</span>
+                </div>
+                <h3>Intelligence Reports</h3>
+                <p>Technical write-ups, CTF debriefs, and field intelligence documentation.</p>
+                <span class="card-link">tail -f intel.log <span class="cursor">_</span></span>
+            </a>
+
+            <!-- Contact Card -->
+            <a href="pages/contact.html" class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <span class="card-code">COMMS-SEC</span>
+                </div>
+                <h3>Secure Communications</h3>
+                <p>Establish encrypted contact for collaboration, consulting, or mission briefings.</p>
+                <span class="card-link">./init_comms.sh <span class="cursor">_</span></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cyber-footer">
+        <div class="footer-content">
+            <div class="footer-status">
+                <span class="footer-dot"></span>
+                <span>SYSTEMS ONLINE</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/jeremylaratro" target="_blank" class="footer-link">[GitHub]</a>
+                <a href="https://www.linkedin.com/in/JeremyLaratro" target="_blank" class="footer-link">[LinkedIn]</a>
+            </div>
+            <div class="footer-copy">
+                &copy; <span id="year"></span> // Secure Channel
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/matrix.js"></script>
+    <script src="js/main.js"></script>
 </body>
-
-
 </html>

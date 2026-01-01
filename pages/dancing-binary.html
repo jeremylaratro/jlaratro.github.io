@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dancing Binary | Cyber Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #050810;
+            --bg-secondary: #0a0f18;
+            --accent-blue: #0099cc;
+            --accent-blue-light: #00ccff;
+            --accent-green: #00aa77;
+            --accent-yellow: #ffcc00;
+            --accent-red: #cc0044;
+            --accent-purple: #9933ff;
+            --text-primary: #c8d4e0;
+            --font-display: 'Orbitron', sans-serif;
+            --font-mono: 'Share Tech Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-mono);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, transparent 100%);
+        }
+
+        .page-header h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--accent-blue-light);
+            text-shadow: 0 0 30px rgba(0, 204, 255, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: var(--text-primary);
+            opacity: 0.7;
+        }
+
+        .variations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .variation-card {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(0, 153, 204, 0.3);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .variation-card:hover {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 30px rgba(0, 153, 204, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .variation-header {
+            padding: 15px 20px;
+            background: rgba(0, 153, 204, 0.1);
+            border-bottom: 1px solid rgba(0, 153, 204, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .variation-number {
+            background: var(--accent-blue);
+            color: var(--bg-primary);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-weight: bold;
+        }
+
+        .variation-title {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--accent-blue-light);
+        }
+
+        .animation-container {
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(ellipse at center, rgba(0, 153, 204, 0.05) 0%, transparent 70%);
+        }
+
+        .binary-digit {
+            position: absolute;
+            font-family: var(--font-mono);
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 0 0 10px currentColor;
+            user-select: none;
+        }
+
+        /* ============================================
+           VARIATION 1: BOUNCE
+           Digits bounce up and down with varying phases
+           ============================================ */
+        .bounce .binary-digit {
+            color: var(--accent-blue-light);
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-50px) scale(1.2); }
+        }
+
+        .bounce .binary-digit:nth-child(odd) { animation-delay: 0s; }
+        .bounce .binary-digit:nth-child(even) { animation-delay: 0.5s; }
+        .bounce .binary-digit:nth-child(3n) { animation-delay: 0.25s; }
+        .bounce .binary-digit:nth-child(4n) { animation-delay: 0.75s; }
+
+        /* ============================================
+           VARIATION 2: WAVE
+           Digits flow in a wave pattern horizontally
+           ============================================ */
+        .wave .binary-digit {
+            color: var(--accent-green);
+            animation: wave 2s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.6;
+            }
+            25% {
+                transform: translateY(-40px) rotate(10deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.6;
+            }
+            75% {
+                transform: translateY(40px) rotate(-10deg);
+                opacity: 1;
+            }
+        }
+
+        .wave .binary-digit:nth-child(1) { animation-delay: 0s; }
+        .wave .binary-digit:nth-child(2) { animation-delay: 0.1s; }
+        .wave .binary-digit:nth-child(3) { animation-delay: 0.2s; }
+        .wave .binary-digit:nth-child(4) { animation-delay: 0.3s; }
+        .wave .binary-digit:nth-child(5) { animation-delay: 0.4s; }
+        .wave .binary-digit:nth-child(6) { animation-delay: 0.5s; }
+        .wave .binary-digit:nth-child(7) { animation-delay: 0.6s; }
+        .wave .binary-digit:nth-child(8) { animation-delay: 0.7s; }
+        .wave .binary-digit:nth-child(9) { animation-delay: 0.8s; }
+        .wave .binary-digit:nth-child(10) { animation-delay: 0.9s; }
+
+        /* ============================================
+           VARIATION 3: SPIRAL
+           Digits rotate in a spiral pattern
+           ============================================ */
+        .spiral .binary-digit {
+            color: var(--accent-yellow);
+            animation: spiral 3s linear infinite;
+            transform-origin: center center;
+        }
+
+        @keyframes spiral {
+            0% {
+                transform: rotate(0deg) translateX(0) scale(1);
+                opacity: 1;
+            }
+            25% {
+                transform: rotate(90deg) translateX(30px) scale(1.3);
+                opacity: 0.8;
+            }
+            50% {
+                transform: rotate(180deg) translateX(0) scale(1);
+                opacity: 0.6;
+            }
+            75% {
+                transform: rotate(270deg) translateX(-30px) scale(0.7);
+                opacity: 0.8;
+            }
+            100% {
+                transform: rotate(360deg) translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .spiral .binary-digit:nth-child(odd) { animation-direction: normal; }
+        .spiral .binary-digit:nth-child(even) { animation-direction: reverse; }
+        .spiral .binary-digit:nth-child(3n) { animation-duration: 2s; }
+        .spiral .binary-digit:nth-child(5n) { animation-duration: 4s; }
+
+        /* ============================================
+           VARIATION 4: PULSE & GLITCH
+           Digits pulse with a glitch effect
+           ============================================ */
+        .pulse .binary-digit {
+            color: var(--accent-red);
+            animation: pulse 1.5s ease-in-out infinite, glitch 0.3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                text-shadow: 0 0 10px currentColor;
+            }
+            50% {
+                transform: scale(1.5);
+                text-shadow: 0 0 30px currentColor, 0 0 60px currentColor;
+            }
+        }
+
+        @keyframes glitch {
+            0%, 90%, 100% {
+                transform: translate(0);
+                filter: hue-rotate(0deg);
+            }
+            92% {
+                transform: translate(-2px, 1px);
+                filter: hue-rotate(90deg);
+            }
+            94% {
+                transform: translate(2px, -1px);
+                filter: hue-rotate(180deg);
+            }
+            96% {
+                transform: translate(-1px, -1px);
+                filter: hue-rotate(270deg);
+            }
+            98% {
+                transform: translate(1px, 1px);
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .pulse .binary-digit:nth-child(1) { animation-delay: 0s; }
+        .pulse .binary-digit:nth-child(2) { animation-delay: 0.15s; }
+        .pulse .binary-digit:nth-child(3) { animation-delay: 0.3s; }
+        .pulse .binary-digit:nth-child(4) { animation-delay: 0.45s; }
+        .pulse .binary-digit:nth-child(5) { animation-delay: 0.6s; }
+        .pulse .binary-digit:nth-child(6) { animation-delay: 0.75s; }
+        .pulse .binary-digit:nth-child(7) { animation-delay: 0.9s; }
+        .pulse .binary-digit:nth-child(8) { animation-delay: 1.05s; }
+        .pulse .binary-digit:nth-child(9) { animation-delay: 1.2s; }
+        .pulse .binary-digit:nth-child(10) { animation-delay: 1.35s; }
+
+        /* ============================================
+           VARIATION 5: ORBIT
+           Digits orbit around a central point
+           ============================================ */
+        .orbit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .orbit-center {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle, var(--accent-purple) 0%, transparent 70%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 20px;
+            color: white;
+            text-shadow: 0 0 20px var(--accent-purple);
+            animation: centerPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes centerPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .orbit .binary-digit {
+            color: var(--accent-purple);
+            animation: orbit 4s linear infinite;
+            transform-origin: 150px 150px;
+        }
+
+        @keyframes orbit {
+            0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+        }
+
+        .orbit .binary-digit:nth-child(1) { animation-delay: 0s; --orbit-radius: 60px; }
+        .orbit .binary-digit:nth-child(2) { animation-delay: 0.4s; --orbit-radius: 80px; }
+        .orbit .binary-digit:nth-child(3) { animation-delay: 0.8s; --orbit-radius: 100px; }
+        .orbit .binary-digit:nth-child(4) { animation-delay: 1.2s; --orbit-radius: 70px; }
+        .orbit .binary-digit:nth-child(5) { animation-delay: 1.6s; --orbit-radius: 90px; }
+        .orbit .binary-digit:nth-child(6) { animation-delay: 2s; --orbit-radius: 110px; }
+        .orbit .binary-digit:nth-child(7) { animation-delay: 2.4s; --orbit-radius: 65px; }
+        .orbit .binary-digit:nth-child(8) { animation-delay: 2.8s; --orbit-radius: 85px; }
+        .orbit .binary-digit:nth-child(9) { animation-delay: 3.2s; --orbit-radius: 95px; }
+        .orbit .binary-digit:nth-child(10) { animation-delay: 3.6s; --orbit-radius: 75px; }
+
+        .orbit .binary-digit:nth-child(even) { animation-direction: reverse; }
+
+        /* Description styling */
+        .variation-description {
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(0, 153, 204, 0.2);
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            opacity: 0.8;
+        }
+
+        /* Fullscreen showcase */
+        .fullscreen-section {
+            padding: 60px 30px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 153, 204, 0.2);
+            margin-top: 40px;
+        }
+
+        .fullscreen-section h2 {
+            font-family: var(--font-display);
+            color: var(--accent-blue-light);
+            margin-bottom: 20px;
+        }
+
+        .fullscreen-canvas {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            border: 1px solid rgba(0, 153, 204, 0.3);
+            border-radius: 8px;
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            color: var(--accent-blue);
+            text-decoration: none;
+            border: 1px solid var(--accent-blue);
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: var(--accent-blue);
+            color: var(--bg-primary);
+        }
+
+        /* Scanline overlay */
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.1) 0px,
+                rgba(0, 0, 0, 0.1) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            z-index: 1000;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="scanlines"></div>
+
+    <a href="../index.html" class="back-link">← Back to Home</a>
+
+    <header class="page-header">
+        <h1>Dancing Binary</h1>
+        <p>5 Unique Animation Variations</p>
+    </header>
+
+    <div class="variations-grid">
+        <!-- Variation 1: Bounce -->
+        <div class="variation-card">
+            <div class="variation-header">
+                <span class="variation-number">1</span>
+                <span class="variation-title">BOUNCE</span>
+            </div>
+            <div class="animation-container bounce" id="bounce-container">
+                <!-- Digits generated by JS -->
+            </div>
+            <div class="variation-description">
+                Binary digits bounce up and down with elastic motion and staggered timing.
+            </div>
+        </div>
+
+        <!-- Variation 2: Wave -->
+        <div class="variation-card">
+            <div class="variation-header">
+                <span class="variation-number">2</span>
+                <span class="variation-title">WAVE</span>
+            </div>
+            <div class="animation-container wave" id="wave-container">
+                <!-- Digits generated by JS -->
+            </div>
+            <div class="variation-description">
+                Digits flow in a synchronized wave pattern with rotation effects.
+            </div>
+        </div>
+
+        <!-- Variation 3: Spiral -->
+        <div class="variation-card">
+            <div class="variation-header">
+                <span class="variation-number">3</span>
+                <span class="variation-title">SPIRAL</span>
+            </div>
+            <div class="animation-container spiral" id="spiral-container">
+                <!-- Digits generated by JS -->
+            </div>
+            <div class="variation-description">
+                Binary numbers rotate and spiral with varying speeds and directions.
+            </div>
+        </div>
+
+        <!-- Variation 4: Pulse & Glitch -->
+        <div class="variation-card">
+            <div class="variation-header">
+                <span class="variation-number">4</span>
+                <span class="variation-title">PULSE & GLITCH</span>
+            </div>
+            <div class="animation-container pulse" id="pulse-container">
+                <!-- Digits generated by JS -->
+            </div>
+            <div class="variation-description">
+                Digits pulse with intensity and experience random glitch distortions.
+            </div>
+        </div>
+
+        <!-- Variation 5: Orbit -->
+        <div class="variation-card">
+            <div class="variation-header">
+                <span class="variation-number">5</span>
+                <span class="variation-title">ORBIT</span>
+            </div>
+            <div class="animation-container orbit" id="orbit-container">
+                <div class="orbit-center">01</div>
+                <!-- Digits generated by JS -->
+            </div>
+            <div class="variation-description">
+                Binary digits orbit around a central point in multiple directions.
+            </div>
+        </div>
+    </div>
+
+    <!-- Combined Fullscreen Showcase -->
+    <section class="fullscreen-section">
+        <h2>Combined Showcase</h2>
+        <div class="fullscreen-canvas" id="fullscreen-canvas">
+            <!-- All variations combined -->
+        </div>
+    </section>
+
+    <script>
+        // Generate binary digits for each container
+        function createBinaryDigits(containerId, count, positions) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            for (let i = 0; i < count; i++) {
+                const digit = document.createElement('span');
+                digit.className = 'binary-digit';
+                digit.textContent = Math.random() > 0.5 ? '1' : '0';
+
+                if (positions === 'grid') {
+                    // Grid layout
+                    const cols = Math.ceil(Math.sqrt(count));
+                    const row = Math.floor(i / cols);
+                    const col = i % cols;
+                    digit.style.left = `${(col + 0.5) * (100 / cols)}%`;
+                    digit.style.top = `${(row + 0.5) * (100 / Math.ceil(count / cols))}%`;
+                    digit.style.transform = 'translate(-50%, -50%)';
+                } else if (positions === 'row') {
+                    // Row layout
+                    digit.style.left = `${(i + 0.5) * (100 / count)}%`;
+                    digit.style.top = '50%';
+                    digit.style.transform = 'translate(-50%, -50%)';
+                } else if (positions === 'center') {
+                    // Centered (for orbit)
+                    digit.style.left = '50%';
+                    digit.style.top = '50%';
+                    digit.style.marginLeft = '-12px';
+                    digit.style.marginTop = '-12px';
+                } else {
+                    // Random
+                    digit.style.left = `${10 + Math.random() * 80}%`;
+                    digit.style.top = `${10 + Math.random() * 80}%`;
+                }
+
+                container.appendChild(digit);
+            }
+        }
+
+        // Initialize all containers
+        createBinaryDigits('bounce-container', 12, 'grid');
+        createBinaryDigits('wave-container', 10, 'row');
+        createBinaryDigits('spiral-container', 15, 'random');
+        createBinaryDigits('pulse-container', 10, 'random');
+        createBinaryDigits('orbit-container', 10, 'center');
+
+        // Fullscreen combined showcase
+        function createFullscreenShowcase() {
+            const canvas = document.getElementById('fullscreen-canvas');
+            if (!canvas) return;
+
+            const colors = ['#00ccff', '#00aa77', '#ffcc00', '#cc0044', '#9933ff'];
+            const animations = ['bounce', 'wave', 'spiral', 'pulse', 'orbit'];
+
+            for (let i = 0; i < 50; i++) {
+                const digit = document.createElement('span');
+                digit.className = 'binary-digit';
+                digit.textContent = Math.random() > 0.5 ? '1' : '0';
+                digit.style.left = `${5 + Math.random() * 90}%`;
+                digit.style.top = `${5 + Math.random() * 90}%`;
+                digit.style.color = colors[Math.floor(Math.random() * colors.length)];
+                digit.style.fontSize = `${16 + Math.random() * 20}px`;
+
+                // Apply random animation
+                const anim = animations[Math.floor(Math.random() * animations.length)];
+                const duration = 1 + Math.random() * 3;
+                const delay = Math.random() * 2;
+
+                switch(anim) {
+                    case 'bounce':
+                        digit.style.animation = `bounce ${duration}s ease-in-out ${delay}s infinite`;
+                        break;
+                    case 'wave':
+                        digit.style.animation = `wave ${duration}s ease-in-out ${delay}s infinite`;
+                        break;
+                    case 'spiral':
+                        digit.style.animation = `spiral ${duration}s linear ${delay}s infinite`;
+                        break;
+                    case 'pulse':
+                        digit.style.animation = `pulse ${duration}s ease-in-out ${delay}s infinite`;
+                        break;
+                    case 'orbit':
+                        digit.style.animation = `orbit ${duration * 2}s linear ${delay}s infinite`;
+                        break;
+                }
+
+                canvas.appendChild(digit);
+            }
+        }
+
+        createFullscreenShowcase();
+
+        // Randomly change digit values
+        setInterval(() => {
+            const digits = document.querySelectorAll('.binary-digit');
+            digits.forEach(digit => {
+                if (Math.random() > 0.95) {
+                    digit.textContent = digit.textContent === '1' ? '0' : '1';
+                }
+            });
+        }, 100);
+    </script>
+</body>
+</html>

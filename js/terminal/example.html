@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Terminal Example</title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/terminal.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div style="padding: 100px 20px;">
+        <h1 style="text-align: center; margin-bottom: 2rem; font-family: var(--font-display); color: var(--accent-blue-light);">
+            Interactive Terminal Demo
+        </h1>
+
+        <!-- Terminal Window -->
+        <div class="terminal-window">
+            <!-- Terminal Header -->
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="terminal-btn close"></span>
+                    <span class="terminal-btn min"></span>
+                    <span class="terminal-btn max"></span>
+                </div>
+                <div class="terminal-title">guest@portfolio.sh</div>
+                <div class="terminal-status">
+                    <span class="status-dot"></span>
+                    <span>ONLINE</span>
+                </div>
+            </div>
+
+            <!-- Terminal Body with Interactive Terminal -->
+            <div class="terminal-container" id="interactive-terminal"></div>
+        </div>
+
+        <!-- Instructions -->
+        <div style="max-width: 900px; margin: 2rem auto; padding: 1.5rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 4px;">
+            <h3 style="font-family: var(--font-display); color: var(--accent-yellow); margin-bottom: 1rem;">
+                Quick Start
+            </h3>
+            <ul style="font-family: var(--font-mono); color: var(--text-secondary); line-height: 1.8;">
+                <li>Type <code style="color: var(--accent-blue-light);">help</code> to see available commands</li>
+                <li>Type <code style="color: var(--accent-blue-light);">ls</code> to list files and directories</li>
+                <li>Type <code style="color: var(--accent-blue-light);">cat filename</code> to read a file</li>
+                <li>Use <strong>↑</strong> and <strong>↓</strong> arrow keys to navigate command history</li>
+                <li>Press <strong>Ctrl+L</strong> to clear the screen</li>
+                <li>Press <strong>Ctrl+C</strong> to cancel current input</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Terminal Module -->
+    <script type="module">
+        import { initTerminal } from './ui.js';
+
+        // Initialize terminal when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            const terminal = initTerminal('#interactive-terminal');
+
+            // Optional: Listen for custom events
+            window.addEventListener('terminal:matrix', () => {
+                console.log('Matrix effect triggered!');
+                // You can trigger matrix animation here
+            });
+        });
+    </script>
+</body>
+</html>

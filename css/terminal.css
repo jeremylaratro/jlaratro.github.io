@@ -1,0 +1,311 @@
+/* ============================================
+   INTERACTIVE TERMINAL STYLES
+   Terminal UI component styles
+   ============================================ */
+
+/* Terminal Container */
+.terminal-container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-mono);
+    position: relative;
+}
+
+/* Terminal Output Area */
+.terminal-output {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-primary);
+    background: transparent;
+    scroll-behavior: smooth;
+}
+
+/* Terminal Output Lines */
+.terminal-line {
+    margin-bottom: 0.25rem;
+    word-wrap: break-word;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.terminal-line.prompt {
+    color: var(--text-primary);
+}
+
+.terminal-line.output {
+    color: var(--text-secondary);
+}
+
+.terminal-line.error {
+    color: var(--accent-red-bright);
+}
+
+.terminal-line.system {
+    color: var(--accent-yellow);
+}
+
+.terminal-line.info {
+    color: var(--accent-blue-light);
+}
+
+/* Terminal Input Line */
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--border-color);
+    background: rgba(5, 15, 25, 0.5);
+    gap: 0.5rem;
+}
+
+/* Terminal Prompt */
+.terminal-prompt {
+    color: var(--accent-green-bright);
+    font-weight: bold;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+/* Terminal Input Field */
+.terminal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    padding: 0;
+    caret-color: var(--accent-green-bright);
+}
+
+.terminal-input::selection {
+    background: var(--accent-blue);
+    color: var(--bg-primary);
+}
+
+/* Terminal Scrollbar */
+.terminal-output::-webkit-scrollbar {
+    width: 6px;
+}
+
+.terminal-output::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.terminal-output::-webkit-scrollbar-thumb {
+    background: var(--accent-blue-dim);
+    border-radius: 3px;
+}
+
+.terminal-output::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-blue);
+}
+
+/* Terminal Line Content Styling */
+.terminal-line .cmd,
+.terminal-line .command {
+    color: var(--accent-yellow);
+}
+
+.terminal-line .highlight {
+    color: var(--accent-blue-light);
+    font-weight: bold;
+}
+
+.terminal-line .success {
+    color: var(--accent-green-bright);
+}
+
+.terminal-line .value {
+    color: var(--accent-yellow);
+}
+
+.terminal-line .info {
+    color: var(--text-primary);
+}
+
+/* File listing colors (for ls command) */
+.terminal-line .file-dir {
+    color: var(--accent-blue-light);
+    font-weight: bold;
+}
+
+.terminal-line .file-exec {
+    color: var(--accent-green-bright);
+}
+
+.terminal-line .file-link {
+    color: var(--accent-blue-light);
+}
+
+.terminal-line .file-regular {
+    color: var(--text-secondary);
+}
+
+/* Terminal Cursor Blink */
+.terminal-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background: var(--accent-green-bright);
+    animation: cursorBlink 1s step-end infinite;
+    margin-left: 2px;
+}
+
+@keyframes cursorBlink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+/* Terminal Focus State */
+.terminal-container:focus-within .terminal-input-line {
+    border-top-color: var(--accent-blue);
+    box-shadow: 0 -1px 0 0 var(--accent-blue);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .terminal-container {
+        height: 400px;
+    }
+
+    .terminal-output {
+        font-size: 0.8rem;
+    }
+
+    .terminal-input,
+    .terminal-prompt {
+        font-size: 0.8rem;
+    }
+
+    .terminal-input-line {
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    .terminal-container {
+        height: 350px;
+    }
+
+    .terminal-output {
+        font-size: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    .terminal-input,
+    .terminal-prompt {
+        font-size: 0.75rem;
+    }
+}
+
+/* Terminal Loading State */
+.terminal-container.loading .terminal-input-line {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Terminal Welcome Message */
+.terminal-output .welcome {
+    color: var(--accent-blue-light);
+    text-shadow: 0 0 5px var(--accent-blue);
+}
+
+/* Terminal ASCII Art */
+.terminal-output pre {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-mono);
+    line-height: 1.2;
+    white-space: pre;
+    overflow-x: auto;
+}
+
+/* Terminal Tables (for command output like ls -l) */
+.terminal-output table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.terminal-output td {
+    padding: 0.25rem 0.5rem;
+    font-family: var(--font-mono);
+}
+
+/* Terminal Links */
+.terminal-line a {
+    color: var(--accent-blue-light);
+    text-decoration: underline;
+    transition: var(--transition-fast);
+}
+
+.terminal-line a:hover {
+    color: var(--accent-green-bright);
+    text-shadow: var(--glow-green);
+}
+
+/* Terminal Code Blocks */
+.terminal-output code {
+    background: rgba(0, 153, 204, 0.1);
+    padding: 0.1rem 0.3rem;
+    border-radius: 2px;
+    font-family: var(--font-mono);
+    color: var(--accent-yellow);
+}
+
+/* Terminal Status Messages */
+.terminal-line.status {
+    color: var(--accent-green-bright);
+    font-style: italic;
+}
+
+/* Terminal Warning Messages */
+.terminal-line.warning {
+    color: var(--accent-yellow-bright);
+}
+
+/* Terminal Selection */
+.terminal-output::selection,
+.terminal-line::selection {
+    background: var(--accent-blue);
+    color: var(--bg-primary);
+}
+
+/* Terminal Empty State */
+.terminal-output:empty::after {
+    content: '';
+    display: block;
+}
+
+/* Animation for new output lines */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.terminal-line.animate {
+    animation: slideIn 0.2s ease-out;
+}
+
+/* Terminal Header (if integrated with terminal-window) */
+.terminal-window .terminal-container {
+    height: calc(100% - 3rem);
+    border-radius: 0 0 4px 4px;
+}

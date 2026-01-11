@@ -257,5 +257,17 @@
 
     <script src="js/matrix.js"></script>
     <script src="js/main.js"></script>
+    <script type="module" src="js/terminal/index.js"></script>
+    <script>
+        // Handle matrix easter egg command
+        window.addEventListener('terminal:matrix', () => {
+            // Intensify matrix effect temporarily
+            const canvas = document.getElementById('matrix-canvas');
+            if (canvas) {
+                canvas.style.opacity = '0.8';
+                setTimeout(() => canvas.style.opacity = '', 3000);
+            }
+        });
+    </script>
 </body>
 </html>

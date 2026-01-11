@@ -65,8 +65,10 @@ export class CommandExecutor {
     }
 
     // Parse and execute single command
-    const parsed = parseCommandLine(commandLine);
-    return this._executeCommand(parsed.command, parsed.args, null);
+    const tokens = parseCommandLine(commandLine);
+    const command = tokens[0] || '';
+    const args = tokens.slice(1);
+    return this._executeCommand(command, args, null);
   }
 
   /**
@@ -90,7 +92,7 @@ export class CommandExecutor {
       result = this.executeWithInput(cmd, result.output);
 
       // If command failed, stop pipeline
-      if (result.isError) {
+      if (!result.success) {
         return result;
       }
     }
@@ -107,8 +109,8 @@ export class CommandExecutor {
   executeWithRedirect(commandLine, pipeInput = null) {
     const redirect = parseRedirect(commandLine);
 
-    if (!redirect.filename) {
-      return new CommandResult('Error: Invalid redirect syntax', true);
+    if (!redirect || !redirect.file) {
+      return new CommandResult('Error: Invalid redirect syntax', false);
     }
 
     // Execute the command
@@ -116,8 +118,8 @@ export class CommandExecutor {
 
     // Write output to file
     try {
-      const currentDir = this.filesystem.getCurrentPath();
-      const targetPath = this.filesystem.resolvePath(redirect.filename, currentDir);
+      const currentDir = this.filesystem.pwd();
+      const targetPath = this.filesystem.resolvePath(redirect.file, currentDir);
 
       // Check if file exists for append mode
       const exists = this.filesystem.fileExists(targetPath);
@@ -148,8 +150,10 @@ export class CommandExecutor {
    * @returns {CommandResult} The result
    */
   executeWithInput(commandLine, pipeInput) {
-    const parsed = parseCommandLine(commandLine);
-    return this._executeCommand(parsed.command, parsed.args, pipeInput);
+    const tokens = parseCommandLine(commandLine);
+    const command = tokens[0] || '';
+    const args = tokens.slice(1);
+    return this._executeCommand(command, args, pipeInput);
   }
 
   /**

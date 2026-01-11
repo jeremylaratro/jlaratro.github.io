@@ -308,6 +308,15 @@ export class VirtualFilesystem {
         return node instanceof VirtualFile;
     }
 
+    fileExists(path) {
+        const node = this._getNodeAtPath(path);
+        return node instanceof VirtualFile;
+    }
+
+    readFile(path) {
+        return this.cat(path);
+    }
+
     // ========================================================================
     // File Operations
     // ========================================================================

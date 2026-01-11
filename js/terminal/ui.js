@@ -37,7 +37,7 @@ export class Terminal {
     this.container.innerHTML = `
       <div class="terminal-output" id="terminal-output"></div>
       <div class="terminal-input-line">
-        <span class="terminal-prompt">guest@portfolio:~$</span>
+        <span class="terminal-prompt">user@portfolio:~$</span>
         <input type="text" class="terminal-input" id="terminal-input"
                autocomplete="off" spellcheck="false" autofocus>
       </div>
@@ -139,11 +139,11 @@ export class Terminal {
     } else if (input.trim() === 'matrix') {
       // Emit custom event for matrix effect
       window.dispatchEvent(new CustomEvent('terminal:matrix'));
-      this.addOutput(result.output, result.isError ? 'error' : 'output');
+      this.addOutput(result.output, !result.success ? 'error' : 'output');
     } else {
       // Display the result
       if (result.output) {
-        this.addOutput(result.output, result.isError ? 'error' : 'output');
+        this.addOutput(result.output, !result.success ? 'error' : 'output');
       }
     }
 
@@ -237,16 +237,20 @@ export class Terminal {
    * Update prompt with current directory
    */
   updatePrompt() {
-    const cwd = this.executor.filesystem.getCurrentPath();
-    const shortPath = cwd === '/home/guest' ? '~' : cwd;
-    this.promptElement.textContent = `guest@portfolio:${shortPath}$`;
+    const cwd = this.executor.filesystem.pwd();
+    const homeDir = this.executor.filesystem.homeDirectory;
+    const shortPath = cwd === homeDir ? '~' : cwd.replace(homeDir, '~');
+    this.promptElement.textContent = `user@portfolio:${shortPath}$`;
   }
 
   /**
    * Scroll output to bottom
    */
   scrollToBottom() {
-    this.outputContainer.scrollTop = this.outputContainer.scrollHeight;
+    // Use requestAnimationFrame to ensure DOM has updated
+    requestAnimationFrame(() => {
+      this.outputContainer.scrollTop = this.outputContainer.scrollHeight;
+    });
   }
 
   /**

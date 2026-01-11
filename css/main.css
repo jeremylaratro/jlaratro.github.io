@@ -1140,3 +1140,165 @@ footer {
 .mb-2 { margin-bottom: 1rem; }
 .mb-3 { margin-bottom: 1.5rem; }
 .mb-4 { margin-bottom: 2rem; }
+
+/* ============================================
+   INTERACTIVE TERMINAL STYLES
+   ============================================ */
+
+/* Terminal Container - Interactive Mode */
+.terminal-body.terminal-interactive {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    max-height: 60vh;
+    overflow: hidden;
+}
+
+/* Terminal Output Area */
+.terminal-output {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5rem 0;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Individual Output Lines */
+.terminal-line {
+    padding: 2px 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.terminal-line.prompt {
+    color: var(--accent-green-bright);
+}
+
+.terminal-line.output {
+    color: var(--text-primary);
+}
+
+.terminal-line.error {
+    color: var(--accent-red-bright);
+}
+
+.terminal-line.system {
+    color: var(--accent-yellow);
+}
+
+.terminal-line.info {
+    color: var(--accent-blue-light);
+}
+
+/* Input Line */
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+}
+
+.terminal-prompt {
+    color: var(--accent-green-bright);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+}
+
+.terminal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    caret-color: var(--accent-green-bright);
+}
+
+.terminal-input::placeholder {
+    color: var(--text-muted);
+}
+
+/* Terminal cursor blink */
+.terminal-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1.2em;
+    background: var(--accent-green-bright);
+    animation: cursor-blink 1s step-end infinite;
+    vertical-align: text-bottom;
+}
+
+@keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ls command styling */
+.ls-directory {
+    color: var(--accent-blue-light);
+    font-weight: 500;
+}
+
+.ls-file {
+    color: var(--text-primary);
+}
+
+.ls-executable {
+    color: var(--accent-green-bright);
+}
+
+.ls-hidden {
+    color: var(--text-muted);
+}
+
+.ls-permissions {
+    color: var(--text-secondary);
+}
+
+.ls-size {
+    color: var(--accent-yellow);
+}
+
+.ls-date {
+    color: var(--text-secondary);
+}
+
+/* Welcome banner styling */
+.terminal-welcome {
+    color: var(--accent-blue-light);
+    margin-bottom: 1rem;
+}
+
+/* ASCII art in terminal */
+.terminal-ascii {
+    color: var(--accent-green-bright);
+    line-height: 1.2;
+}
+
+/* Hide static content when interactive */
+.terminal-interactive .intel-header,
+.terminal-interactive .prompt-line,
+.terminal-interactive .ascii-name,
+.terminal-interactive .output,
+.terminal-interactive .typing-text {
+    display: none;
+}
+
+/* Mobile adjustments for terminal */
+@media (max-width: 768px) {
+    .terminal-body.terminal-interactive {
+        height: 300px;
+        max-height: 50vh;
+    }
+
+    .terminal-output,
+    .terminal-prompt,
+    .terminal-input {
+        font-size: 0.8rem;
+    }
+}

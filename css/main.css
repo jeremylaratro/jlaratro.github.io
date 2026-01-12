@@ -1157,14 +1157,17 @@ footer {
 /* Terminal Output Area - Interactive Terminal */
 .terminal-body.terminal-interactive .terminal-output {
     flex: 1;
-    overflow-y: auto;
+    overflow-y: auto !important;
     padding: 0.5rem 1rem;
     font-family: var(--font-mono);
     font-size: 0.9rem;
     line-height: 1.5;
     min-height: 100px;
-    display: block;
+    display: block !important;
     color: var(--text-primary);
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto;
 }
 
 /* Individual Output Lines - Interactive Terminal */
@@ -1172,7 +1175,9 @@ footer {
     padding: 2px 0;
     white-space: pre-wrap;
     word-break: break-word;
-    display: block;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .terminal-body.terminal-interactive .terminal-line.prompt {

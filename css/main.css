@@ -1210,13 +1210,27 @@ footer {
 
 .terminal-input {
     flex: 1;
-    background: transparent;
-    border: none;
-    outline: none;
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
     color: var(--text-primary);
     font-family: var(--font-mono);
     font-size: 0.9rem;
     caret-color: var(--accent-green-bright);
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.terminal-input:focus {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .terminal-input::placeholder {

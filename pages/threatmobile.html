@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThreatMobile | Mobile Threat Intelligence</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/effects.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- CRT Effect -->
+    <div class="crt"></div>
+
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+
+    <!-- Classification Bar -->
+    <div class="class-bar"></div>
+
+    <!-- Tactical Frame -->
+    <div class="tactical-frame"></div>
+    <div class="tactical-frame-bottom"></div>
+
+    <!-- Navigation -->
+    <nav class="cyber-nav">
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="../index.html" class="nav-logo">
+                    <span class="logo-bracket">[</span>
+                    <span class="logo-text">JL</span>
+                    <span class="logo-bracket">]</span>
+                </a>
+                <span class="logo-tag">CYBER OPS</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">./home</a>
+                <a href="about.html" class="nav-link">./whoami</a>
+                <a href="cyber-projects.html" class="nav-link active">./cyberops</a>
+                <a href="projects.html" class="nav-link">./research</a>
+                <a href="blog.html" class="nav-link">./intel</a>
+                <a href="contact.html" class="nav-link">./comms</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="ascii-page-title" style="font-size: 0.5rem;">
+████████╗██╗  ██╗██████╗ ███████╗ █████╗ ████████╗███╗   ███╗ ██████╗ ██████╗ ██╗██╗     ███████╗
+╚══██╔══╝██║  ██║██╔══██╗██╔════╝██╔══██╗╚══██╔══╝████╗ ████║██╔═══██╗██╔══██╗██║██║     ██╔════╝
+   ██║   ███████║██████╔╝█████╗  ███████║   ██║   ██╔████╔██║██║   ██║██████╔╝██║██║     █████╗
+   ██║   ██╔══██║██╔══██╗██╔══╝  ██╔══██║   ██║   ██║╚██╔╝██║██║   ██║██╔══██╗██║██║     ██╔══╝
+   ██║   ██║  ██║██║  ██║███████╗██║  ██║   ██║   ██║ ╚═╝ ██║╚██████╔╝██████╔╝██║███████╗███████╗
+   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚═╝╚══════╝╚══════╝</div>
+        <p class="page-subtitle">// Mobile Threat Intelligence Platform</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <section class="content-section">
+            <div class="terminal-window" style="max-width: 900px; margin: 0 auto 3rem;">
+                <div class="terminal-header">
+                    <span class="terminal-btn red"></span>
+                    <span class="terminal-btn yellow"></span>
+                    <span class="terminal-btn green"></span>
+                    <span class="terminal-title">threatmobile.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">./threatmobile --status</span></p>
+                    <p class="terminal-output">[<span class="success">OK</span>] Platform: iOS & Android (Flutter)</p>
+                    <p class="terminal-output">[<span class="success">OK</span>] Status: Private Repository</p>
+                    <p class="terminal-output">[<span class="success">OK</span>] Threat Feeds: Connected</p>
+                    <p class="terminal-output">[<span class="success">OK</span>] IOC Scanning: Active</p>
+                    <br>
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat description.txt</span></p>
+                    <p class="terminal-output" style="color: var(--text-secondary);">
+                        ThreatMobile is a mobile threat intelligence application providing<br>
+                        security analysts with real-time IOC lookups, threat feed aggregation,<br>
+                        and vulnerability tracking on iOS and Android devices.
+                    </p>
+                </div>
+            </div>
+
+            <h2 class="section-title">FEATURES</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                    </div>
+                    <h4>IOC Lookups</h4>
+                    <p>Quick lookup of IP addresses, domains, file hashes, and URLs against multiple threat intelligence sources.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h4>Threat Feed Aggregation</h4>
+                    <p>Real-time aggregation from VirusTotal, AlienVault OTX, ThreatFox, AbuseIPDB, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <line x1="12" y1="8" x2="12" y2="12"/>
+                            <line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                    </div>
+                    <h4>CVE Tracking</h4>
+                    <p>Monitor CVE database for new vulnerabilities with severity scoring and exploit availability alerts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h4>Real-Time Alerts</h4>
+                    <p>Push notifications for new threats matching your watchlists and monitored indicators.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <polyline points="9 11 12 14 22 4"/>
+                        </svg>
+                    </div>
+                    <h4>Watchlists</h4>
+                    <p>Create custom watchlists for domains, IPs, and hashes to monitor for new threat intel.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <h4>Cross-Platform</h4>
+                    <p>Single Flutter codebase for iOS and Android with native performance and offline support.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">INTEL SOURCES</h2>
+            <div class="tech-details" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div class="info-card">
+                    <h4>VirusTotal</h4>
+                    <p style="color: var(--text-secondary);">File and URL analysis with 70+ AV engines.</p>
+                </div>
+                <div class="info-card">
+                    <h4>AlienVault OTX</h4>
+                    <p style="color: var(--text-secondary);">Community threat intelligence platform.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Shodan</h4>
+                    <p style="color: var(--text-secondary);">Internet-connected device intelligence.</p>
+                </div>
+                <div class="info-card">
+                    <h4>GreyNoise</h4>
+                    <p style="color: var(--text-secondary);">Internet background noise analysis.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">TECH STACK</h2>
+            <div class="tech-details" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div class="info-card">
+                    <h4>Frontend</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Flutter</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Dart</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Material Design 3</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>APIs</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Threat Intel APIs</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">CVE Database</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">MITRE ATT&CK</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Features</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Push Notifications</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Offline Cache</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Biometric Auth</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" style="text-align: center;">
+            <a href="cyber-projects.html" class="cyber-btn">&larr; Back to Projects</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="cyber-footer">
+        <div class="footer-content">
+            <div class="footer-status">
+                <span class="footer-dot"></span>
+                <span>SYSTEMS ONLINE</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/jeremylaratro" target="_blank" class="footer-link">[GitHub]</a>
+                <a href="https://www.linkedin.com/in/JeremyLaratro" target="_blank" class="footer-link">[LinkedIn]</a>
+            </div>
+            <div class="footer-copy">
+                &copy; <span id="year"></span> // Secure Channel
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

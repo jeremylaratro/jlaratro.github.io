@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AugFly | Augmented Reality Flight Tracker</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/effects.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- CRT Effect -->
+    <div class="crt"></div>
+
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+
+    <!-- Classification Bar -->
+    <div class="class-bar"></div>
+
+    <!-- Tactical Frame -->
+    <div class="tactical-frame"></div>
+    <div class="tactical-frame-bottom"></div>
+
+    <!-- Navigation -->
+    <nav class="cyber-nav">
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="../index.html" class="nav-logo">
+                    <span class="logo-bracket">[</span>
+                    <span class="logo-text">JL</span>
+                    <span class="logo-bracket">]</span>
+                </a>
+                <span class="logo-tag">CYBER OPS</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">./home</a>
+                <a href="about.html" class="nav-link">./whoami</a>
+                <a href="cyber-projects.html" class="nav-link active">./cyberops</a>
+                <a href="projects.html" class="nav-link">./research</a>
+                <a href="blog.html" class="nav-link">./intel</a>
+                <a href="contact.html" class="nav-link">./comms</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="ascii-page-title">
+ █████╗ ██╗   ██╗ ██████╗ ███████╗██╗  ██╗   ██╗
+██╔══██╗██║   ██║██╔════╝ ██╔════╝██║  ╚██╗ ██╔╝
+███████║██║   ██║██║  ███╗█████╗  ██║   ╚████╔╝
+██╔══██║██║   ██║██║   ██║██╔══╝  ██║    ╚██╔╝
+██║  ██║╚██████╔╝╚██████╔╝██║     ███████╗██║
+╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚═╝     ╚══════╝╚═╝</div>
+        <p class="page-subtitle">// Augmented Reality Flight Tracker</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <section class="content-section">
+            <div class="terminal-window" style="max-width: 900px; margin: 0 auto 3rem;">
+                <div class="terminal-header">
+                    <span class="terminal-btn red"></span>
+                    <span class="terminal-btn yellow"></span>
+                    <span class="terminal-btn green"></span>
+                    <span class="terminal-title">augfly.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">./augfly --info</span></p>
+                    <p class="terminal-output">[<span class="success">OK</span>] Platform: iOS (Swift/SwiftUI)</p>
+                    <p class="terminal-output">[<span class="success">OK</span>] Status: Private Repository</p>
+                    <p class="terminal-output">[<span class="success">OK</span>] ARKit: Enabled</p>
+                    <p class="terminal-output">[<span class="success">OK</span>] Real-Time Data: ADS-B</p>
+                    <br>
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat description.txt</span></p>
+                    <p class="terminal-output" style="color: var(--text-secondary);">
+                        AugFly is an augmented reality flight tracking application for iOS.<br>
+                        Point your camera at the sky to see real-time flight information<br>
+                        overlaid on aircraft using ARKit and live ADS-B data feeds.
+                    </p>
+                </div>
+            </div>
+
+            <h2 class="section-title">FEATURES</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <h4>ARKit Integration</h4>
+                    <p>Advanced augmented reality using Apple ARKit for precise aircraft overlay and tracking.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h4>Real-Time ADS-B Data</h4>
+                    <p>Live aircraft tracking using ADS-B transponder data for accurate flight information.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h4>GPS Location</h4>
+                    <p>Accurate positioning using device GPS for calculating aircraft positions relative to your location.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                    </div>
+                    <h4>Flight Details</h4>
+                    <p>View airline, flight number, aircraft type, altitude, speed, origin, and destination in AR view.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <h4>Native iOS</h4>
+                    <p>Built with Swift and SwiftUI for optimal performance and native iOS experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h4>Offline Caching</h4>
+                    <p>Aircraft and airline database cached locally for faster lookups and offline identification.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">TECH STACK</h2>
+            <div class="tech-details" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div class="info-card">
+                    <h4>Frontend</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Swift</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">SwiftUI</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">ARKit</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Data Sources</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">ADS-B Exchange</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">OpenSky Network</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">FlightAware API</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Features</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Core Location</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">SceneKit</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Combine</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" style="text-align: center;">
+            <a href="cyber-projects.html" class="cyber-btn">&larr; Back to Projects</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="cyber-footer">
+        <div class="footer-content">
+            <div class="footer-status">
+                <span class="footer-dot"></span>
+                <span>SYSTEMS ONLINE</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/jeremylaratro" target="_blank" class="footer-link">[GitHub]</a>
+                <a href="https://www.linkedin.com/in/JeremyLaratro" target="_blank" class="footer-link">[LinkedIn]</a>
+            </div>
+            <div class="footer-copy">
+                &copy; <span id="year"></span> // Secure Channel
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

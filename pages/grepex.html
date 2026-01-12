@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrepEx | iOS Regex & Search Dork Generator</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/effects.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- CRT Effect -->
+    <div class="crt"></div>
+
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+
+    <!-- Classification Bar -->
+    <div class="class-bar"></div>
+
+    <!-- Tactical Frame -->
+    <div class="tactical-frame"></div>
+    <div class="tactical-frame-bottom"></div>
+
+    <!-- Navigation -->
+    <nav class="cyber-nav">
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="../index.html" class="nav-logo">
+                    <span class="logo-bracket">[</span>
+                    <span class="logo-text">JL</span>
+                    <span class="logo-bracket">]</span>
+                </a>
+                <span class="logo-tag">CYBER OPS</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">./home</a>
+                <a href="about.html" class="nav-link">./whoami</a>
+                <a href="cyber-projects.html" class="nav-link active">./cyberops</a>
+                <a href="projects.html" class="nav-link">./research</a>
+                <a href="blog.html" class="nav-link">./intel</a>
+                <a href="contact.html" class="nav-link">./comms</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="ascii-page-title" style="font-size: 0.6rem;">
+ ██████╗ ██████╗ ███████╗██████╗ ███████╗██╗  ██╗
+██╔════╝ ██╔══██╗██╔════╝██╔══██╗██╔════╝╚██╗██╔╝
+██║  ███╗██████╔╝█████╗  ██████╔╝█████╗   ╚███╔╝
+██║   ██║██╔══██╗██╔══╝  ██╔═══╝ ██╔══╝   ██╔██╗
+╚██████╔╝██║  ██║███████╗██║     ███████╗██╔╝ ██╗
+ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝     ╚══════╝╚═╝  ╚═╝</div>
+        <p class="page-subtitle">// iOS Regex & Search Dork Generator</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <section class="content-section">
+            <div class="terminal-window" style="max-width: 900px; margin: 0 auto 3rem;">
+                <div class="terminal-header">
+                    <span class="terminal-btn red"></span>
+                    <span class="terminal-btn yellow"></span>
+                    <span class="terminal-btn green"></span>
+                    <span class="terminal-title">grepex.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">./grepex --info</span></p>
+                    <p class="terminal-output">[<span class="success">OK</span>] Platform: iOS (React Native / TypeScript)</p>
+                    <p class="terminal-output">[<span class="success">OK</span>] Status: Private Repository</p>
+                    <p class="terminal-output">[<span class="success">OK</span>] Version: 1.0.0</p>
+                    <br>
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat description.txt</span></p>
+                    <p class="terminal-output" style="color: var(--text-secondary);">
+                        GrepEx is an iOS application designed for security researchers and<br>
+                        developers to generate regex patterns and Google search dorks.<br>
+                        Built with React Native and TypeScript for optimal performance.
+                    </p>
+                </div>
+            </div>
+
+            <h2 class="section-title">FEATURES</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                    </div>
+                    <h4>80+ Pattern Templates</h4>
+                    <p>Pre-built regex patterns for common security research scenarios including IPs, emails, URLs, credentials, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h4>21 Language Outputs</h4>
+                    <p>Generate regex patterns formatted for Python, JavaScript, Go, Rust, Java, and 16 other programming languages.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
+                    </div>
+                    <h4>GHDB Integration</h4>
+                    <p>Access to 3600+ Google Hacking Database dorks for vulnerability discovery and reconnaissance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h4>ReDoS Protection</h4>
+                    <p>Built-in detection and warnings for potentially vulnerable regular expressions that could cause denial of service.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h4>Live Testing</h4>
+                    <p>Real-time regex testing against sample text with match highlighting and group extraction.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <h4>Gamification</h4>
+                    <p>Achievement system to track progress and encourage exploration of regex and dork capabilities.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">TECH STACK</h2>
+            <div class="tech-details" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div class="info-card">
+                    <h4>Frontend</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">React Native</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">TypeScript</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Expo</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Features</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Regex Engine</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">GHDB Database</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Pattern Library</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Platform</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">iOS Native</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">App Store Ready</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Offline Support</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" style="text-align: center;">
+            <a href="cyber-projects.html" class="cyber-btn">&larr; Back to Projects</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="cyber-footer">
+        <div class="footer-content">
+            <div class="footer-status">
+                <span class="footer-dot"></span>
+                <span>SYSTEMS ONLINE</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/jeremylaratro" target="_blank" class="footer-link">[GitHub]</a>
+                <a href="https://www.linkedin.com/in/JeremyLaratro" target="_blank" class="footer-link">[LinkedIn]</a>
+            </div>
+            <div class="footer-copy">
+                &copy; <span id="year"></span> // Secure Channel
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

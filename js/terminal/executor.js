@@ -41,7 +41,7 @@ export class CommandExecutor {
 
     // Return empty result if blank
     if (!commandLine) {
-      return new CommandResult('', false);
+      return new CommandResult('', true);
     }
 
     // Add to history
@@ -78,7 +78,7 @@ export class CommandExecutor {
    */
   executePipeline(commandLine) {
     const commands = splitByPipe(commandLine);
-    let result = new CommandResult('', false);
+    let result = CommandResult.success('');
 
     for (let i = 0; i < commands.length; i++) {
       const cmd = commands[i].trim();
@@ -110,7 +110,7 @@ export class CommandExecutor {
     const redirect = parseRedirect(commandLine);
 
     if (!redirect || !redirect.file) {
-      return new CommandResult('Error: Invalid redirect syntax', false);
+      return CommandResult.error('Error: Invalid redirect syntax');
     }
 
     // Execute the command
@@ -137,9 +137,9 @@ export class CommandExecutor {
         this.filesystem.writeFile(targetPath, result.output);
       }
 
-      return new CommandResult('', false);
+      return CommandResult.success('');
     } catch (error) {
-      return new CommandResult(`Error: ${error.message}`, true);
+      return CommandResult.error(`Error: ${error.message}`);
     }
   }
 
@@ -166,7 +166,7 @@ export class CommandExecutor {
    */
   _executeCommand(command, args, pipeInput) {
     if (!command) {
-      return new CommandResult('', false);
+      return CommandResult.success('');
     }
 
     // Command routing map
@@ -230,12 +230,12 @@ export class CommandExecutor {
       try {
         return commands[command]();
       } catch (error) {
-        return new CommandResult(`Error executing ${command}: ${error.message}`, true);
+        return CommandResult.error(`Error executing ${command}: ${error.message}`);
       }
     }
 
     // Command not found
-    return new CommandResult(`Command not found: ${command}. Type 'help' for available commands.`, true);
+    return CommandResult.error(`Command not found: ${command}. Type 'help' for available commands.`);
   }
 
   /**
@@ -278,6 +278,14 @@ export class CommandExecutor {
    */
   getAliases() {
     return { ...this.aliases };
+  }
+
+  /**
+   * Get command history
+   * @returns {Array<string>} The history array
+   */
+  getHistory() {
+    return [...this.history];
   }
 }
 

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCTF | Mobile CTF Platform for iOS</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/effects.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- CRT Effect -->
+    <div class="crt"></div>
+
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+
+    <!-- Classification Bar -->
+    <div class="class-bar"></div>
+
+    <!-- Tactical Frame -->
+    <div class="tactical-frame"></div>
+    <div class="tactical-frame-bottom"></div>
+
+    <!-- Navigation -->
+    <nav class="cyber-nav">
+        <div class="nav-container">
+            <div style="display: flex; align-items: center;">
+                <a href="../index.html" class="nav-logo">
+                    <span class="logo-bracket">[</span>
+                    <span class="logo-text">JL</span>
+                    <span class="logo-bracket">]</span>
+                </a>
+                <span class="logo-tag">CYBER OPS</span>
+            </div>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">./home</a>
+                <a href="about.html" class="nav-link">./whoami</a>
+                <a href="cyber-projects.html" class="nav-link active">./cyberops</a>
+                <a href="projects.html" class="nav-link">./research</a>
+                <a href="blog.html" class="nav-link">./intel</a>
+                <a href="contact.html" class="nav-link">./comms</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="ascii-page-title">
+██╗ ██████╗████████╗███████╗
+██║██╔════╝╚══██╔══╝██╔════╝
+██║██║        ██║   █████╗
+██║██║        ██║   ██╔══╝
+██║╚██████╗   ██║   ██║
+╚═╝ ╚═════╝   ╚═╝   ╚═╝</div>
+        <p class="page-subtitle">// Mobile CTF Platform for iOS Security Training</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <section class="content-section">
+            <div class="terminal-window" style="max-width: 900px; margin: 0 auto 3rem;">
+                <div class="terminal-header">
+                    <span class="terminal-btn red"></span>
+                    <span class="terminal-btn yellow"></span>
+                    <span class="terminal-btn green"></span>
+                    <span class="terminal-title">ictf.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">./ictf --init</span></p>
+                    <p class="terminal-output">[<span class="success">OK</span>] Platform: iOS (Flutter/Dart)</p>
+                    <p class="terminal-output">[<span class="success">OK</span>] Status: Private Repository</p>
+                    <p class="terminal-output">[<span class="success">OK</span>] Challenge Categories: 5</p>
+                    <p class="terminal-output">[<span class="success">OK</span>] No Jailbreak Required</p>
+                    <br>
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat description.txt</span></p>
+                    <p class="terminal-output" style="color: var(--text-secondary);">
+                        iCTF is a mobile cybersecurity CTF platform for iOS providing<br>
+                        hands-on security challenges without requiring a jailbreak.<br>
+                        Features include cryptography, web security, forensics, reverse<br>
+                        engineering, and network challenges with sandboxed execution<br>
+                        and a full terminal emulator.
+                    </p>
+                </div>
+            </div>
+
+            <h2 class="section-title">CHALLENGE CATEGORIES</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <h4>Cryptography</h4>
+                    <p>Classical ciphers, modern encryption, hash cracking, and encoding challenges to test cryptanalysis skills.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </div>
+                    <h4>Web Security</h4>
+                    <p>XSS, SQL injection, CSRF, authentication bypass, and other web vulnerability exploitation challenges.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                    </div>
+                    <h4>Forensics</h4>
+                    <p>File carving, steganography, memory analysis, and metadata extraction for digital investigation training.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h4>Reverse Engineering</h4>
+                    <p>Binary analysis, disassembly, debugging, and code analysis challenges for reverse engineering practice.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h4>Network</h4>
+                    <p>Packet analysis, protocol exploitation, traffic interception, and network reconnaissance challenges.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="4 17 10 11 4 5"/>
+                            <line x1="12" y1="19" x2="20" y2="19"/>
+                        </svg>
+                    </div>
+                    <h4>Terminal Emulator</h4>
+                    <p>Built-in Unix-like terminal with 40+ commands for hands-on practice without leaving the app.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">KEY FEATURES</h2>
+            <div class="tech-details" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                <div class="info-card">
+                    <h4>Sandboxed Execution</h4>
+                    <p style="color: var(--text-secondary);">All challenges run in a secure sandbox environment, ensuring safe execution without system modifications.</p>
+                </div>
+                <div class="info-card">
+                    <h4>No Jailbreak Required</h4>
+                    <p style="color: var(--text-secondary);">Full CTF experience on stock iOS devices - no jailbreak or special configuration needed.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Progress Tracking</h4>
+                    <p style="color: var(--text-secondary);">Track solved challenges, earn points, and compete on leaderboards with persistent progress.</p>
+                </div>
+                <div class="info-card">
+                    <h4>Hint System</h4>
+                    <p style="color: var(--text-secondary);">Progressive hint system for each challenge to guide learning without giving away solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">TECH STACK</h2>
+            <div class="tech-details" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div class="info-card">
+                    <h4>Frontend</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Flutter</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Dart</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Custom Terminal UI</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Features</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Virtual Filesystem</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Crypto Libraries</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Challenge Engine</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <h4>Platform</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">iOS Native</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Offline Support</li>
+                        <li style="padding: 0.25rem 0; color: var(--text-secondary);">Cloud Sync</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" style="text-align: center;">
+            <a href="cyber-projects.html" class="cyber-btn">&larr; Back to Projects</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="cyber-footer">
+        <div class="footer-content">
+            <div class="footer-status">
+                <span class="footer-dot"></span>
+                <span>SYSTEMS ONLINE</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/jeremylaratro" target="_blank" class="footer-link">[GitHub]</a>
+                <a href="https://www.linkedin.com/in/JeremyLaratro" target="_blank" class="footer-link">[LinkedIn]</a>
+            </div>
+            <div class="footer-copy">
+                &copy; <span id="year"></span> // Secure Channel
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

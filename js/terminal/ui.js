@@ -292,7 +292,7 @@ export class Terminal {
    * Get the current working directory
    */
   getCwd() {
-    return this.executor.filesystem.getCurrentPath();
+    return this.executor.filesystem.pwd();
   }
 
   /**

@@ -37,7 +37,7 @@ export class Terminal {
     this.container.innerHTML = `
       <div class="terminal-output" id="terminal-output"></div>
       <div class="terminal-input-line">
-        <span class="terminal-prompt">user@portfolio:~$</span>
+        <span class="terminal-prompt">d0sf3t@compromised_host03:~$</span>
         <input type="text" class="terminal-input" id="terminal-input"
                autocomplete="off" spellcheck="false" autofocus>
       </div>
@@ -247,7 +247,7 @@ export class Terminal {
     const cwd = this.executor.filesystem.pwd();
     const homeDir = this.executor.filesystem.homeDirectory;
     const shortPath = cwd === homeDir ? '~' : cwd.replace(homeDir, '~');
-    this.promptElement.textContent = `user@portfolio:${shortPath}$`;
+    this.promptElement.textContent = `d0sf3t@compromised_host03:${shortPath}$`;
   }
 
   /**
@@ -271,11 +271,17 @@ export class Terminal {
    * Display welcome message
    */
   displayWelcome() {
-    const welcome = `╔══════════════════════════════════════════════════════════╗
-║  PORTFOLIO TERMINAL v1.5.0                               ║
-║  Type 'help' for available commands                      ║
-║  Type 'ls' to explore, 'cat <file>' to read              ║
-╚══════════════════════════════════════════════════════════╝`;
+    const welcome = `
+     _  ___        __  _____  _
+  __| |/ _ \\ ___ / _||___ / | |_
+ / _\` | | | / __| |_   |_ \\ | __|
+| (_| | |_| \\__ \\  _| ___) || |_
+ \\__,_|\\___/|___/_|  |____/  \\__|
+
+            d0sf3t 2026
+
+Type 'help' for available commands
+Type 'ls' to explore, 'cat <file>' to read`;
 
     this.addOutput(welcome, 'system');
     this.addOutput('', 'output'); // Empty line for spacing

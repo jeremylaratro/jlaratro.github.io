@@ -1303,13 +1303,23 @@ footer {
     line-height: 1.2;
 }
 
-/* Hide static content when interactive */
+/* Static content styling in interactive mode */
 .terminal-interactive .intel-header,
 .terminal-interactive .prompt-line,
 .terminal-interactive .ascii-name,
 .terminal-interactive .output,
 .terminal-interactive .typing-text {
-    display: none;
+    /* Keep static content visible */
+}
+
+/* Interactive terminal section styling */
+.terminal-interactive-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 0.5rem;
 }
 
 /* Mobile adjustments for terminal */

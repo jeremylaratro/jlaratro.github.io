@@ -27,14 +27,17 @@ export class Terminal {
     this.setupElements();
     this.setupEventListeners();
     this.focus();
-    this.displayWelcome();
+    // Don't show welcome message - static content is visible above
   }
 
   /**
-   * Generate terminal HTML structure
+   * Generate terminal HTML structure - append to existing content
    */
   createTerminalHTML() {
-    this.container.innerHTML = `
+    // Create a wrapper for the interactive terminal elements
+    const interactiveWrapper = document.createElement('div');
+    interactiveWrapper.className = 'terminal-interactive-section';
+    interactiveWrapper.innerHTML = `
       <div class="terminal-output" id="terminal-output"></div>
       <div class="terminal-input-line">
         <span class="terminal-prompt">d0sf3t@compromised_host03:~$</span>
@@ -42,6 +45,7 @@ export class Terminal {
                autocomplete="off" spellcheck="false" autofocus>
       </div>
     `;
+    this.container.appendChild(interactiveWrapper);
   }
 
   /**

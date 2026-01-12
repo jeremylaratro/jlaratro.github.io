@@ -271,20 +271,25 @@ export class Terminal {
    * Display welcome message
    */
   displayWelcome() {
-    const welcome = `▄▄██▀▀▀   ██▓    ▄▄▄       ██▀███   ▄▄▄    ▄▄▄█████▓ ██▀███   ▒█████
+    const asciiArt = `▄▄██▀▀▀   ██▓    ▄▄▄       ██▀███   ▄▄▄    ▄▄▄█████▓ ██▀███   ▒█████
    ▒██     ▓██▒   ▒████▄    ▓██ ▒ ██▒▒████▄  ▓  ██▒ ▓▒▓██ ▒ ██▒▒██▒  ██▒
    ░██     ▒██░   ▒██  ▀█▄  ▓██ ░▄█ ▒▒██  ▀█▄▒ ▓██░ ▒░▓██ ░▄█ ▒▒██░  ██▒
 ▓██▄██▓    ▒██░   ░██▄▄▄▄██ ▒██▀▀█▄  ░██▄▄▄▄██░ ▓██▓ ░ ▒██▀▀█▄  ▒██   ██░
  ▓███▒     ░██████▒▓█   ▓██▒░██▓ ▒██▒ ▓█   ▓██▒ ▒██▒ ░ ░██▓ ▒██▒░ ████▓▒░
  ▒▓▒▒░     ░ ▒░▓  ░▒▒   ▓▒█░░ ▒▓ ░▒▓░ ▒▒   ▓▒█░ ▒ ░░   ░ ▒▓ ░▒▓░░ ▒░▒░▒░
  ▒ ░▒░     ░ ░ ▒  ░ ▒   ▒▒ ░  ░▒ ░ ▒░  ▒   ▒▒ ░   ░      ░▒ ░ ▒░  ░ ▒ ▒░
- ░ ░ ░       ░ ░    ░   ▒     ░░   ░   ░   ▒    ░        ░░   ░ ░ ░ ░ ▒
+ ░ ░ ░       ░ ░    ░   ▒     ░░   ░   ░   ▒    ░        ░░   ░ ░ ░ ░ ▒`;
 
-Type 'help' for available commands
-Type 'ls' to explore, 'cat <file>' to read`;
+    // Use pre tag for ASCII art to preserve exact spacing
+    const preElement = document.createElement('pre');
+    preElement.className = 'terminal-ascii-art';
+    preElement.textContent = asciiArt;
+    this.outputContainer.appendChild(preElement);
 
-    this.addOutput(welcome, 'system');
-    this.addOutput('', 'output'); // Empty line for spacing
+    this.addOutput('', 'output');
+    this.addOutput("Type 'help' for available commands", 'system');
+    this.addOutput("Type 'ls' to explore, 'cat <file>' to read", 'system');
+    this.addOutput('', 'output');
   }
 
   /**

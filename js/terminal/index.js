@@ -15,15 +15,24 @@ export { Terminal, initTerminal, CommandExecutor, VirtualFilesystem };
 
 // Auto-initialize if terminal container exists
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM loaded, looking for terminal container...');
   const terminalContainer = document.querySelector('.terminal-body');
+  console.log('Terminal container found:', terminalContainer);
+
   if (terminalContainer) {
     // Add interactive class to signal this is now interactive
     terminalContainer.classList.add('terminal-interactive');
 
-    // Initialize the terminal
-    window.portfolioTerminal = initTerminal('.terminal-body');
-
-    console.log('Portfolio Terminal v1.5.0 initialized');
+    try {
+      // Initialize the terminal
+      window.portfolioTerminal = initTerminal('.terminal-body');
+      console.log('Portfolio Terminal v1.5.0 initialized successfully');
+      console.log('Terminal instance:', window.portfolioTerminal);
+    } catch (error) {
+      console.error('Failed to initialize terminal:', error);
+    }
+  } else {
+    console.warn('No .terminal-body container found');
   }
 });
 

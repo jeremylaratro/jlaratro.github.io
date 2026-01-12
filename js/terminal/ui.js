@@ -131,7 +131,14 @@ export class Terminal {
     this.addOutput(input, 'prompt', true);
 
     // Execute the command
-    const result = this.executor.execute(input);
+    let result;
+    try {
+      result = this.executor.execute(input);
+      console.log('Command result:', result);
+    } catch (error) {
+      console.error('Executor error:', error);
+      result = { output: `Error: ${error.message}`, success: false };
+    }
 
     // Handle special commands
     if (input.trim() === 'clear' || input.trim() === 'cls') {
@@ -141,8 +148,8 @@ export class Terminal {
       window.dispatchEvent(new CustomEvent('terminal:matrix'));
       this.addOutput(result.output, !result.success ? 'error' : 'output');
     } else {
-      // Display the result
-      if (result.output) {
+      // Display the result - show output even if empty string
+      if (result && result.output !== undefined && result.output !== null) {
         this.addOutput(result.output, !result.success ? 'error' : 'output');
       }
     }

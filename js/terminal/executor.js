@@ -36,39 +36,49 @@ export class CommandExecutor {
    * @returns {CommandResult} The result of the command execution
    */
   execute(commandLine) {
-    // Trim input
-    commandLine = commandLine.trim();
+    console.log('Executing command:', commandLine);
 
-    // Return empty result if blank
-    if (!commandLine) {
-      return new CommandResult('', true);
+    try {
+      // Trim input
+      commandLine = commandLine.trim();
+
+      // Return empty result if blank
+      if (!commandLine) {
+        return new CommandResult('', true);
+      }
+
+      // Add to history
+      this.addToHistory(commandLine);
+
+      // Check for aliases and expand
+      const firstWord = commandLine.split(/\s+/)[0];
+      if (this.aliases[firstWord]) {
+        const rest = commandLine.substring(firstWord.length).trim();
+        commandLine = rest ? `${this.aliases[firstWord]} ${rest}` : this.aliases[firstWord];
+      }
+
+      // Check for pipes
+      if (containsUnquotedPipe(commandLine)) {
+        return this.executePipeline(commandLine);
+      }
+
+      // Check for redirects
+      if (containsUnquotedRedirect(commandLine)) {
+        return this.executeWithRedirect(commandLine);
+      }
+
+      // Parse and execute single command
+      const tokens = parseCommandLine(commandLine);
+      console.log('Parsed tokens:', tokens);
+      const command = tokens[0] || '';
+      const args = tokens.slice(1);
+      const result = this._executeCommand(command, args, null);
+      console.log('Command result:', result);
+      return result;
+    } catch (error) {
+      console.error('Execute error:', error);
+      return CommandResult.error(`Execution error: ${error.message}`);
     }
-
-    // Add to history
-    this.addToHistory(commandLine);
-
-    // Check for aliases and expand
-    const firstWord = commandLine.split(/\s+/)[0];
-    if (this.aliases[firstWord]) {
-      const rest = commandLine.substring(firstWord.length).trim();
-      commandLine = rest ? `${this.aliases[firstWord]} ${rest}` : this.aliases[firstWord];
-    }
-
-    // Check for pipes
-    if (containsUnquotedPipe(commandLine)) {
-      return this.executePipeline(commandLine);
-    }
-
-    // Check for redirects
-    if (containsUnquotedRedirect(commandLine)) {
-      return this.executeWithRedirect(commandLine);
-    }
-
-    // Parse and execute single command
-    const tokens = parseCommandLine(commandLine);
-    const command = tokens[0] || '';
-    const args = tokens.slice(1);
-    return this._executeCommand(command, args, null);
   }
 
   /**

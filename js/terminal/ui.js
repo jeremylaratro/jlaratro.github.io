@@ -177,6 +177,8 @@ export class Terminal {
    * @param {boolean} showPrompt - Whether to show the prompt before the text
    */
   addOutput(text, type = 'output', showPrompt = false) {
+    console.log('addOutput called with:', { text: text.substring(0, 100), type, showPrompt });
+    console.log('outputContainer:', this.outputContainer);
     const lines = text.split('\n');
 
     lines.forEach((line, index) => {
@@ -199,8 +201,10 @@ export class Terminal {
         lineDiv.appendChild(textSpan);
       }
 
+      console.log('Appending lineDiv:', lineDiv.outerHTML);
       this.outputContainer.appendChild(lineDiv);
     });
+    console.log('outputContainer children count:', this.outputContainer.children.length);
   }
 
   /**

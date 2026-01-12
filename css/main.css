@@ -1154,40 +1154,44 @@ footer {
     overflow: hidden;
 }
 
-/* Terminal Output Area */
-.terminal-output {
+/* Terminal Output Area - Interactive Terminal */
+.terminal-body.terminal-interactive .terminal-output {
     flex: 1;
     overflow-y: auto;
-    padding: 0.5rem 0;
+    padding: 0.5rem 1rem;
     font-family: var(--font-mono);
     font-size: 0.9rem;
     line-height: 1.5;
-}
-
-/* Individual Output Lines */
-.terminal-line {
-    padding: 2px 0;
-    white-space: pre-wrap;
-    word-break: break-word;
-}
-
-.terminal-line.prompt {
-    color: var(--accent-green-bright);
-}
-
-.terminal-line.output {
+    min-height: 100px;
+    display: block;
     color: var(--text-primary);
 }
 
-.terminal-line.error {
+/* Individual Output Lines - Interactive Terminal */
+.terminal-body.terminal-interactive .terminal-line {
+    padding: 2px 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    display: block;
+}
+
+.terminal-body.terminal-interactive .terminal-line.prompt {
+    color: var(--accent-green-bright);
+}
+
+.terminal-body.terminal-interactive .terminal-line.output {
+    color: var(--text-primary);
+}
+
+.terminal-body.terminal-interactive .terminal-line.error {
     color: var(--accent-red-bright);
 }
 
-.terminal-line.system {
+.terminal-body.terminal-interactive .terminal-line.system {
     color: var(--accent-yellow);
 }
 
-.terminal-line.info {
+.terminal-body.terminal-interactive .terminal-line.info {
     color: var(--accent-blue-light);
 }
 

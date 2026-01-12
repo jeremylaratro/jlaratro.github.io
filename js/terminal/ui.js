@@ -26,18 +26,15 @@ export class Terminal {
     this.createTerminalHTML();
     this.setupElements();
     this.setupEventListeners();
+    this.displayWelcome();
     this.focus();
-    // Don't show welcome message - static content is visible above
   }
 
   /**
-   * Generate terminal HTML structure - append to existing content
+   * Generate terminal HTML structure
    */
   createTerminalHTML() {
-    // Create a wrapper for the interactive terminal elements
-    const interactiveWrapper = document.createElement('div');
-    interactiveWrapper.className = 'terminal-interactive-section';
-    interactiveWrapper.innerHTML = `
+    this.container.innerHTML = `
       <div class="terminal-output" id="terminal-output"></div>
       <div class="terminal-input-line">
         <span class="terminal-prompt">d0sf3t@compromised_host03:~$</span>
@@ -45,7 +42,6 @@ export class Terminal {
                autocomplete="off" spellcheck="false" autofocus>
       </div>
     `;
-    this.container.appendChild(interactiveWrapper);
   }
 
   /**
@@ -275,14 +271,14 @@ export class Terminal {
    * Display welcome message
    */
   displayWelcome() {
-    const welcome = `
-   ▄▄   ▄▄▄▄           ▄▄ ▄▄▄▄▄▄▄
-   ██ ▄██████▄        ██  ▀▀▀▀████  ██
-▄████ ███  ███ ▄█▀▀▀ ▀██▀   ▄▄██▀  ▀██▀▀
-██ ██ ███▄▄███ ▀███▄  ██      ███▄  ██
-▀████  ▀████▀  ▄▄▄█▀  ██  ███████▀  ██
-
-            d0sf3t 2026
+    const welcome = `▄▄██▀▀▀   ██▓    ▄▄▄       ██▀███   ▄▄▄    ▄▄▄█████▓ ██▀███   ▒█████
+   ▒██     ▓██▒   ▒████▄    ▓██ ▒ ██▒▒████▄  ▓  ██▒ ▓▒▓██ ▒ ██▒▒██▒  ██▒
+   ░██     ▒██░   ▒██  ▀█▄  ▓██ ░▄█ ▒▒██  ▀█▄▒ ▓██░ ▒░▓██ ░▄█ ▒▒██░  ██▒
+▓██▄██▓    ▒██░   ░██▄▄▄▄██ ▒██▀▀█▄  ░██▄▄▄▄██░ ▓██▓ ░ ▒██▀▀█▄  ▒██   ██░
+ ▓███▒     ░██████▒▓█   ▓██▒░██▓ ▒██▒ ▓█   ▓██▒ ▒██▒ ░ ░██▓ ▒██▒░ ████▓▒░
+ ▒▓▒▒░     ░ ▒░▓  ░▒▒   ▓▒█░░ ▒▓ ░▒▓░ ▒▒   ▓▒█░ ▒ ░░   ░ ▒▓ ░▒▓░░ ▒░▒░▒░
+ ▒ ░▒░     ░ ░ ▒  ░ ▒   ▒▒ ░  ░▒ ░ ▒░  ▒   ▒▒ ░   ░      ░▒ ░ ▒░  ░ ▒ ▒░
+ ░ ░ ░       ░ ░    ░   ▒     ░░   ░   ░   ▒    ░        ░░   ░ ░ ░ ░ ▒
 
 Type 'help' for available commands
 Type 'ls' to explore, 'cat <file>' to read`;

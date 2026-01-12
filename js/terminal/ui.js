@@ -149,8 +149,12 @@ export class Terminal {
       this.addOutput(result.output, !result.success ? 'error' : 'output');
     } else {
       // Display the result - show output even if empty string
+      console.log('About to display output:', result.output, 'type:', typeof result.output);
       if (result && result.output !== undefined && result.output !== null) {
+        console.log('Calling addOutput with:', result.output.substring(0, 100));
         this.addOutput(result.output, !result.success ? 'error' : 'output');
+      } else {
+        console.log('Skipping addOutput - result or output is null/undefined');
       }
     }
 

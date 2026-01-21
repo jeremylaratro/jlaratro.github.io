@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-01-20
+
+### Added
+- AugFly project card (AR flight tracking app, marked as "COMING SOON")
+- ThreatMobile project card (mobile threat intelligence platform)
+
+### Changed
+- Reorganized cyber-projects.html featured section with 18 projects in priority order
+- Reordered projects: AugFly, ThreatMobile, iCTF, GrepEx, Aradex.io, Linux Security Suite, PurpleSploit, Quantsploit, CyberQuizzer, WinBins, then remaining projects
+
+### Fixed
+- Removed duplicate project card entries that were causing layout issues
+
 ## [1.0.2] - 2026-01-20
 
 ### Fixed

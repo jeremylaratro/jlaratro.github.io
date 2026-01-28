@@ -221,6 +221,46 @@
     }
 }
 
+/* ============================================
+   MOBILE ASCII ART HANDLING
+   ============================================ */
+
+/* ASCII art responsive scaling */
+.terminal-ascii-art {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+/* Hide wide ASCII art on mobile, show simple version */
+@media (max-width: 768px) {
+    .terminal-ascii-art {
+        font-size: 0.5rem;
+        line-height: 1.1;
+    }
+}
+
+@media (max-width: 600px) {
+    .terminal-ascii-art {
+        font-size: 0.4rem;
+        line-height: 1.05;
+    }
+}
+
+@media (max-width: 480px) {
+    .terminal-ascii-art {
+        font-size: 0.32rem;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 380px) {
+    /* Very small screens - use even smaller font or hide */
+    .terminal-ascii-art {
+        font-size: 0.28rem;
+        line-height: 1;
+    }
+}
+
 /* Terminal Loading State */
 .terminal-container.loading .terminal-input-line {
     pointer-events: none;

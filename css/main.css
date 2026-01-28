@@ -1334,4 +1334,49 @@ footer {
     .terminal-input {
         font-size: 0.8rem;
     }
+
+    .intel-terminal {
+        max-width: 100%;
+        margin: 0 0.5rem;
+    }
+
+    .terminal-header {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .terminal-title {
+        font-size: 0.6rem;
+        display: none;
+    }
+
+    .terminal-status span:last-child {
+        display: none;
+    }
+
+    .terminal-body {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .terminal-body.terminal-interactive {
+        height: 250px;
+        max-height: 45vh;
+    }
+
+    .terminal-output,
+    .terminal-prompt,
+    .terminal-input {
+        font-size: 0.75rem;
+    }
+
+    .terminal-prompt {
+        max-width: 120px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .terminal-body {
+        padding: 0.75rem;
+    }
 }

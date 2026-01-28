@@ -271,7 +271,8 @@ export class Terminal {
    * Display welcome message
    */
   displayWelcome() {
-    const asciiArt = `▄▄██▀▀▀   ██▓    ▄▄▄       ██▀███   ▄▄▄    ▄▄▄█████▓ ██▀███   ▒█████
+    // Full ASCII art for desktop
+    const fullAsciiArt = `▄▄██▀▀▀   ██▓    ▄▄▄       ██▀███   ▄▄▄    ▄▄▄█████▓ ██▀███   ▒█████
    ▒██     ▓██▒   ▒████▄    ▓██ ▒ ██▒▒████▄  ▓  ██▒ ▓▒▓██ ▒ ██▒▒██▒  ██▒
    ░██     ▒██░   ▒██  ▀█▄  ▓██ ░▄█ ▒▒██  ▀█▄▒ ▓██░ ▒░▓██ ░▄█ ▒▒██░  ██▒
 ▓██▄██▓    ▒██░   ░██▄▄▄▄██ ▒██▀▀█▄  ░██▄▄▄▄██░ ▓██▓ ░ ▒██▀▀█▄  ▒██   ██░
@@ -280,9 +281,22 @@ export class Terminal {
  ▒ ░▒░     ░ ░ ▒  ░ ▒   ▒▒ ░  ░▒ ░ ▒░  ▒   ▒▒ ░   ░      ░▒ ░ ▒░  ░ ▒ ▒░
  ░ ░ ░       ░ ░    ░   ▒     ░░   ░   ░   ▒    ░        ░░   ░ ░ ░ ░ ▒`;
 
+    // Compact ASCII art for mobile (under 40 chars wide)
+    const mobileAsciiArt = `     ██╗██╗
+     ██║██║
+     ██║██║
+██   ██║██║
+╚█████╔╝███████╗
+ ╚════╝ ╚══════╝`;
+
+    // Check if mobile (under 768px width)
+    const isMobile = window.innerWidth < 768;
+    const asciiArt = isMobile ? mobileAsciiArt : fullAsciiArt;
+
     // Use pre tag for ASCII art to preserve exact spacing
     const preElement = document.createElement('pre');
     preElement.className = 'terminal-ascii-art';
+    preElement.id = 'terminal-welcome-art';
     preElement.textContent = asciiArt;
     this.outputContainer.appendChild(preElement);
 

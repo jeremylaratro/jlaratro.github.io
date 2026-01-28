@@ -1,2 +1,24 @@
+# Build outputs
 /_site/
 /backups/
+
+# Internal documentation and planning
+CLAUDE.md
+/docs/
+/internal_docs/
+VERSION.md
+
+# Working files
+headings
+*.backup
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/

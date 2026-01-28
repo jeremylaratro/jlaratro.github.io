@@ -1,0 +1,38 @@
+# This workflow ONLY runs on jlaratro.us.github.io repository
+# It ensures CNAME is set to jlaratro.us after any push
+name: Fix CNAME for Mirror
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  fix-cname:
+    # Only run on the mirror repo, not the origin
+    if: github.repository == 'jeremylaratro/jlaratro.us.github.io'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check and fix CNAME
+        env:
+          EXPECTED_CNAME: "jlaratro.us"
+        run: |
+          CURRENT=$(cat CNAME 2>/dev/null || echo "")
+
+          if [ "$CURRENT" != "$EXPECTED_CNAME" ]; then
+            echo "Fixing CNAME: '$CURRENT' -> '$EXPECTED_CNAME'"
+            echo "$EXPECTED_CNAME" > CNAME
+
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add CNAME
+            git commit -m "fix: Auto-correct CNAME to jlaratro.us [skip ci]"
+            git push
+          else
+            echo "CNAME is correct: $CURRENT"
+          fi

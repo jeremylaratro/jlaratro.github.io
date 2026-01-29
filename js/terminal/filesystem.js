@@ -555,6 +555,36 @@ Tech Stack: Python, PyPI, OSV API
 Status: Active - Published on PyPI
 `));
 
+        // ULP
+        cyberops.addChild(new VirtualFile('ulp.txt',
+`Universal Log Parser (ULP)
+================================================================================
+GitHub: https://github.com/jeremylaratro/ulp
+
+Python library and CLI tool for automatic log detection, parsing, and normalization.
+Built for production environments with support for large files and log correlation.
+
+Supported Formats (11 types):
+  - JSON/JSONL
+  - Apache Combined/Common
+  - Nginx Access/Error
+  - Syslog (RFC 3164 & 5424)
+  - Python Logging
+  - Docker JSON
+  - Kubernetes
+
+Features:
+  - Auto-detection of log formats (no manual config needed)
+  - Streaming support for 10GB+ files (memory-mapped I/O)
+  - Log correlation across multiple sources
+  - Normalized output to unified schema
+  - Rich CLI with table, JSON, CSV, compact views
+  - Extensible architecture for custom parsers
+
+Tech Stack: Python, Clean Architecture, Domain-Driven Design
+Status: Active - MIT License
+`));
+
         // Polybar Widgets
         cyberops.addChild(new VirtualFile('polybar-widgets.txt',
 `Polybar Widgets

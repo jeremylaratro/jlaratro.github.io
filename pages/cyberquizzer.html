@@ -80,14 +80,17 @@
                 <div class="terminal-body">
                     <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">./cyberquizzer --init</span></p>
                     <p class="terminal-output">[<span class="success">OK</span>] Loading interview preparation modules...</p>
-                    <p class="terminal-output">[<span class="success">OK</span>] 135+ challenges available</p>
+                    <p class="terminal-output">[<span class="success">OK</span>] 300+ multiple-choice questions across 6 modules</p>
+                    <p class="terminal-output">[<span class="success">OK</span>] Self-assessment quizzes with detailed explanations</p>
                     <p class="terminal-output">[<span class="success">OK</span>] Progress tracking enabled</p>
+                    <p class="terminal-output">[<span class="success">OK</span>] Difficulty filtering: Beginner to Expert</p>
                     <br>
                     <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat description.txt</span></p>
                     <p class="terminal-output" style="color: var(--text-secondary);">
-                        Interactive interview preparation platform featuring comprehensive<br>
-                        question banks for cybersecurity roles. Each module includes<br>
-                        categorized challenges, key talking points, and detailed answers.
+                        Interactive cybersecurity knowledge assessment and interview preparation<br>
+                        platform. Features multiple-choice and self-assessment modes, timed quizzes<br>
+                        for exam simulation, and category-based organization for focused study.<br>
+                        Covers pentesting, blue team ops, threat intel, and more.
                     </p>
                 </div>
             </div>
@@ -107,15 +110,14 @@
                         <h3 class="quiz-title">Pentesting Interview Prep</h3>
                         <p class="quiz-desc">Active Directory, Web Application, Linux, Windows, Network, and Cloud security challenges based on modern red team methodologies.</p>
                         <div class="quiz-meta">
-                            <span class="quiz-count">56 Challenges</span>
+                            <span class="quiz-count">53+ Challenges</span>
                             <span class="quiz-difficulty">Intermediate - Advanced</span>
                         </div>
                         <div class="quiz-topics">
                             <span class="topic-tag">Active Directory</span>
                             <span class="topic-tag">Web Apps</span>
-                            <span class="topic-tag">Linux</span>
-                            <span class="topic-tag">Windows</span>
                             <span class="topic-tag">Network</span>
+                            <span class="topic-tag">Mobile</span>
                             <span class="topic-tag">Cloud</span>
                         </div>
                     </div>
@@ -133,12 +135,12 @@
                         <h3 class="quiz-title">Security Engineering & Architecture</h3>
                         <p class="quiz-desc">Architecture principles, application security, IAM, infrastructure security, security operations, and GRC topics for security engineer roles.</p>
                         <div class="quiz-meta">
-                            <span class="quiz-count">25 Challenges</span>
+                            <span class="quiz-count">50+ Challenges</span>
                             <span class="quiz-difficulty">Intermediate - Advanced</span>
                         </div>
                         <div class="quiz-topics">
                             <span class="topic-tag">Architecture</span>
-                            <span class="topic-tag">AppSec</span>
+                            <span class="topic-tag">DevSecOps</span>
                             <span class="topic-tag">IAM</span>
                             <span class="topic-tag">Infrastructure</span>
                             <span class="topic-tag">GRC</span>
@@ -191,17 +193,93 @@
                     </div>
                     <div class="quiz-content">
                         <h3 class="quiz-title">Blue Team / SOC Analyst</h3>
-                        <p class="quiz-desc">SOC operations, SIEM, incident response, threat hunting, forensics, threat intelligence, security tools, and compliance frameworks.</p>
+                        <p class="quiz-desc">SOC operations, SIEM, incident response, forensics, threat intelligence integration, security tools, and compliance frameworks.</p>
                         <div class="quiz-meta">
-                            <span class="quiz-count">28 Challenges</span>
+                            <span class="quiz-count">40+ Challenges</span>
                             <span class="quiz-difficulty">Intermediate - Advanced</span>
                         </div>
                         <div class="quiz-topics">
                             <span class="topic-tag">SOC</span>
                             <span class="topic-tag">SIEM</span>
                             <span class="topic-tag">IR</span>
-                            <span class="topic-tag">Threat Hunting</span>
                             <span class="topic-tag">Forensics</span>
+                        </div>
+                    </div>
+                    <span class="card-link-indicator">START MODULE &#8594;</span>
+                </a>
+
+                <!-- Threat Intelligence -->
+                <a href="#" class="quiz-card clickable-card">
+                    <div class="quiz-icon" style="background: linear-gradient(135deg, #dc2626, #991b1b);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#fca5a5" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="12"/>
+                            <line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                    </div>
+                    <div class="quiz-content">
+                        <h3 class="quiz-title">Threat Intelligence</h3>
+                        <p class="quiz-desc">IOCs, threat actors, attribution analysis, intelligence lifecycle, MITRE ATT&CK mapping, and tactical/strategic intel.</p>
+                        <div class="quiz-meta">
+                            <span class="quiz-count">35+ Challenges</span>
+                            <span class="quiz-difficulty">Intermediate - Advanced</span>
+                        </div>
+                        <div class="quiz-topics">
+                            <span class="topic-tag">IOCs</span>
+                            <span class="topic-tag">Threat Actors</span>
+                            <span class="topic-tag">ATT&CK</span>
+                            <span class="topic-tag">Analysis</span>
+                        </div>
+                    </div>
+                    <span class="card-link-indicator">START MODULE &#8594;</span>
+                </a>
+
+                <!-- Threat Hunting -->
+                <a href="#" class="quiz-card clickable-card">
+                    <div class="quiz-icon" style="background: linear-gradient(135deg, #ea580c, #c2410c);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#fdba74" stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        </svg>
+                    </div>
+                    <div class="quiz-content">
+                        <h3 class="quiz-title">Threat Hunting</h3>
+                        <p class="quiz-desc">Proactive threat detection, hypothesis-driven hunting, MITRE ATT&CK techniques, behavioral analysis, and hunting tools.</p>
+                        <div class="quiz-meta">
+                            <span class="quiz-count">30+ Challenges</span>
+                            <span class="quiz-difficulty">Intermediate - Expert</span>
+                        </div>
+                        <div class="quiz-topics">
+                            <span class="topic-tag">Hypothesis</span>
+                            <span class="topic-tag">ATT&CK</span>
+                            <span class="topic-tag">Behavioral</span>
+                            <span class="topic-tag">Tools</span>
+                        </div>
+                    </div>
+                    <span class="card-link-indicator">START MODULE &#8594;</span>
+                </a>
+
+                <!-- Cryptography -->
+                <a href="#" class="quiz-card clickable-card">
+                    <div class="quiz-icon" style="background: linear-gradient(135deg, #4f46e5, #3730a3);">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#a5b4fc" stroke-width="1.5">
+                            <rect x="3" y="11" width="18" height="11" rx="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            <circle cx="12" cy="16" r="1"/>
+                        </svg>
+                    </div>
+                    <div class="quiz-content">
+                        <h3 class="quiz-title">Cryptography</h3>
+                        <p class="quiz-desc">Encryption algorithms, protocols, key management, PKI, hashing, digital signatures, and cryptographic attacks.</p>
+                        <div class="quiz-meta">
+                            <span class="quiz-count">40+ Challenges</span>
+                            <span class="quiz-difficulty">Beginner - Expert</span>
+                        </div>
+                        <div class="quiz-topics">
+                            <span class="topic-tag">Algorithms</span>
+                            <span class="topic-tag">Protocols</span>
+                            <span class="topic-tag">PKI</span>
+                            <span class="topic-tag">Attacks</span>
                         </div>
                     </div>
                     <span class="card-link-indicator">START MODULE &#8594;</span>
@@ -220,7 +298,7 @@
                         </svg>
                     </div>
                     <h4>Progress Tracking</h4>
-                    <p>Track your completion status for each challenge with persistent local storage.</p>
+                    <p>Track your completion status with persistent local storage. Resume sessions anytime.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -229,8 +307,8 @@
                             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
                         </svg>
                     </div>
-                    <h4>Detailed Answers</h4>
-                    <p>Comprehensive answers with code examples, commands, and explanations.</p>
+                    <h4>Multiple Quiz Modes</h4>
+                    <p>Multiple-choice with instant feedback, self-assessment, and timed exam simulation.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -238,8 +316,8 @@
                             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                         </svg>
                     </div>
-                    <h4>Key Points</h4>
-                    <p>Each question highlights critical talking points for interview success.</p>
+                    <h4>Difficulty Filtering</h4>
+                    <p>Filter by difficulty level from Beginner to Expert. Match your current skill level.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -250,8 +328,8 @@
                             <rect x="3" y="14" width="7" height="7"/>
                         </svg>
                     </div>
-                    <h4>Categorized Topics</h4>
-                    <p>Filter challenges by category to focus on specific areas of study.</p>
+                    <h4>300+ Questions</h4>
+                    <p>Comprehensive coverage across 6 modules with detailed explanations and key points.</p>
                 </div>
             </div>
         </section>
